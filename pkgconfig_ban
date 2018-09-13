@@ -5,3 +5,7 @@ gstreamer-video-$GST_VERSION
 gstreamer-plugins-base-$GST_VERSION
 gstreamer-$GST_VERSION
 gnome-vfs-2.0
+gstreamer-gconf-$GST_VERSION
+gstreamer-interfaces-$GST_VERSION
+hildon-1
+hildon-lgpl
