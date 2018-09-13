@@ -1,0 +1,4 @@
+--without-libtiff
+--enable-cxx11
+--enable-debug_gdb
+--enable-utf8

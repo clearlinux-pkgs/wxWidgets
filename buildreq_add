@@ -1,0 +1,9 @@
+# This file contains additional build requirements that did not get
+# picked up automatically. One name per line, no whitespace.
+gst-plugins-base-dev
+mesa-dev
+gvfs-dev
+gtk3-dev
+buildreq-kde
+libjpeg-turbo-dev
+glu-dev
