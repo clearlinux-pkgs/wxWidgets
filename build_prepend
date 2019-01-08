@@ -1,0 +1,4 @@
+mkdir clr-build
+pushd clr-build
+../configure --with-gtk=3 --prefix=/usr
+popd

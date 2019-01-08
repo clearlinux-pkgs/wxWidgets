@@ -1,5 +1,5 @@
 PKG_NAME := wxWidgets
-URL = https://github.com/wxWidgets/wxWidgets/releases/download/v3.0.4/wxWidgets-3.0.4.tar.bz2
+URL = https://github.com/wxWidgets/wxWidgets/archive/v3.1.2.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common

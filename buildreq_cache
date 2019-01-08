@@ -1,0 +1,4 @@
+3.1.2
+glu-dev
+libjpeg-turbo-dev
+pkgconfig(sm)
