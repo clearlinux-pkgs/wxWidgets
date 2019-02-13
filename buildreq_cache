@@ -2,3 +2,8 @@
 glu-dev
 libjpeg-turbo-dev
 pkgconfig(sm)
+freeglut-dev
+libwebp-dev
+mesa-dev
+tiff-dev
+zstd-dev
