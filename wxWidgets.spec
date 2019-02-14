@@ -5,7 +5,7 @@
 %define keepstatic 1
 Name     : wxWidgets
 Version  : 3.1.2
-Release  : 3
+Release  : 4
 URL      : https://github.com/wxWidgets/wxWidgets/releases/download/v3.1.2/wxWidgets-3.1.2.tar.bz2
 Source0  : https://github.com/wxWidgets/wxWidgets/releases/download/v3.1.2/wxWidgets-3.1.2.tar.bz2
 Summary  : Expat is an XML 1.0 parser written in C.
