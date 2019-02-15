@@ -5,7 +5,7 @@
 %define keepstatic 1
 Name     : wxWidgets
 Version  : 3.1.2
-Release  : 4
+Release  : 5
 URL      : https://github.com/wxWidgets/wxWidgets/releases/download/v3.1.2/wxWidgets-3.1.2.tar.bz2
 Source0  : https://github.com/wxWidgets/wxWidgets/releases/download/v3.1.2/wxWidgets-3.1.2.tar.bz2
 Summary  : Expat is an XML 1.0 parser written in C.
@@ -131,15 +131,16 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1550091340
+export SOURCE_DATE_EPOCH=1550252278
 %autogen  --without-libtiff \
 --enable-cxx11 \
 --enable-debug_gdb \
---enable-utf8
+--enable-utf8 \
+--enable-notebook
 make  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1550091340
+export SOURCE_DATE_EPOCH=1550252278
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/wxWidgets
 cp 3rdparty/catch/LICENSE.txt %{buildroot}/usr/share/package-licenses/wxWidgets/3rdparty_catch_LICENSE.txt

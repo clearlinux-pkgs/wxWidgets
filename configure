@@ -2,3 +2,4 @@
 --enable-cxx11
 --enable-debug_gdb
 --enable-utf8
+--enable-notebook
