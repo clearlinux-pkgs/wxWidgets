@@ -5,7 +5,7 @@
 %define keepstatic 1
 Name     : wxWidgets
 Version  : 3.1.2
-Release  : 5
+Release  : 6
 URL      : https://github.com/wxWidgets/wxWidgets/releases/download/v3.1.2/wxWidgets-3.1.2.tar.bz2
 Source0  : https://github.com/wxWidgets/wxWidgets/releases/download/v3.1.2/wxWidgets-3.1.2.tar.bz2
 Summary  : Expat is an XML 1.0 parser written in C.
@@ -16,7 +16,6 @@ Requires: wxWidgets-data = %{version}-%{release}
 Requires: wxWidgets-lib = %{version}-%{release}
 Requires: wxWidgets-license = %{version}-%{release}
 Requires: wxWidgets-locales = %{version}-%{release}
-Requires: wxWidgets-plugins = %{version}-%{release}
 BuildRequires : buildreq-cmake
 BuildRequires : buildreq-scons
 BuildRequires : cairo-dev
@@ -109,30 +108,17 @@ Group: Default
 locales components for the wxWidgets package.
 
 
-%package plugins
-Summary: plugins components for the wxWidgets package.
-Group: Default
-
-%description plugins
-plugins components for the wxWidgets package.
-
-
 %prep
 %setup -q -n wxWidgets-3.1.2
 
 %build
-## build_prepend content
-mkdir clr-build
-pushd clr-build
-../configure --with-gtk=3 --prefix=/usr
-popd
-## build_prepend end
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1550252278
-%autogen  --without-libtiff \
+export SOURCE_DATE_EPOCH=1550258296
+%autogen  --with-gtk=3 \
+--without-libtiff \
 --enable-cxx11 \
 --enable-debug_gdb \
 --enable-utf8 \
@@ -140,7 +126,7 @@ export SOURCE_DATE_EPOCH=1550252278
 make  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1550252278
+export SOURCE_DATE_EPOCH=1550258296
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/wxWidgets
 cp 3rdparty/catch/LICENSE.txt %{buildroot}/usr/share/package-licenses/wxWidgets/3rdparty_catch_LICENSE.txt
@@ -154,15 +140,13 @@ cp src/png/LICENSE %{buildroot}/usr/share/package-licenses/wxWidgets/src_png_LIC
 cp src/regex/COPYRIGHT %{buildroot}/usr/share/package-licenses/wxWidgets/src_regex_COPYRIGHT
 cp src/stc/scintilla/License.txt %{buildroot}/usr/share/package-licenses/wxWidgets/src_stc_scintilla_License.txt
 cp src/tiff/COPYRIGHT %{buildroot}/usr/share/package-licenses/wxWidgets/src_tiff_COPYRIGHT
-pushd clr-build
 %make_install
-popd
 %find_lang wxstd
 %find_lang wxmsw
 
 %files
 %defattr(-,root,root,-)
-/usr/lib/wx/config/gtk3-unicode-3.1
+/usr/lib64/wx/config/gtk3-unicode-3.1
 
 %files bin
 %defattr(-,root,root,-)
@@ -897,28 +881,60 @@ popd
 /usr/include/wx-3.1/wx/xtixml.h
 /usr/include/wx-3.1/wx/zipstrm.h
 /usr/include/wx-3.1/wx/zstream.h
-/usr/lib/libwx_baseu-3.1.so
-/usr/lib/libwx_baseu_net-3.1.so
-/usr/lib/libwx_baseu_xml-3.1.so
-/usr/lib/libwx_gtk3u_adv-3.1.so
-/usr/lib/libwx_gtk3u_aui-3.1.so
-/usr/lib/libwx_gtk3u_core-3.1.so
-/usr/lib/libwx_gtk3u_gl-3.1.so
-/usr/lib/libwx_gtk3u_html-3.1.so
-/usr/lib/libwx_gtk3u_media-3.1.so
-/usr/lib/libwx_gtk3u_propgrid-3.1.so
-/usr/lib/libwx_gtk3u_qa-3.1.so
-/usr/lib/libwx_gtk3u_ribbon-3.1.so
-/usr/lib/libwx_gtk3u_richtext-3.1.so
-/usr/lib/libwx_gtk3u_stc-3.1.so
-/usr/lib/libwx_gtk3u_webview-3.1.so
-/usr/lib/libwx_gtk3u_xrc-3.1.so
-/usr/lib/wx/include/gtk3-unicode-3.1/wx/setup.h
+/usr/lib64/libwx_baseu-3.1.so
+/usr/lib64/libwx_baseu_net-3.1.so
+/usr/lib64/libwx_baseu_xml-3.1.so
+/usr/lib64/libwx_gtk3u_adv-3.1.so
+/usr/lib64/libwx_gtk3u_aui-3.1.so
+/usr/lib64/libwx_gtk3u_core-3.1.so
+/usr/lib64/libwx_gtk3u_gl-3.1.so
+/usr/lib64/libwx_gtk3u_html-3.1.so
+/usr/lib64/libwx_gtk3u_media-3.1.so
+/usr/lib64/libwx_gtk3u_propgrid-3.1.so
+/usr/lib64/libwx_gtk3u_qa-3.1.so
+/usr/lib64/libwx_gtk3u_ribbon-3.1.so
+/usr/lib64/libwx_gtk3u_richtext-3.1.so
+/usr/lib64/libwx_gtk3u_stc-3.1.so
+/usr/lib64/libwx_gtk3u_webview-3.1.so
+/usr/lib64/libwx_gtk3u_xrc-3.1.so
+/usr/lib64/wx/include/gtk3-unicode-3.1/wx/setup.h
 /usr/share/aclocal/*.m4
 
 %files lib
 %defattr(-,root,root,-)
-/usr/lib/wx/3.1.2/web-extensions/webkit2_extu-3.1.2.so
+/usr/lib64/libwx_baseu-3.1.so.2
+/usr/lib64/libwx_baseu-3.1.so.2.0.0
+/usr/lib64/libwx_baseu_net-3.1.so.2
+/usr/lib64/libwx_baseu_net-3.1.so.2.0.0
+/usr/lib64/libwx_baseu_xml-3.1.so.2
+/usr/lib64/libwx_baseu_xml-3.1.so.2.0.0
+/usr/lib64/libwx_gtk3u_adv-3.1.so.2
+/usr/lib64/libwx_gtk3u_adv-3.1.so.2.0.0
+/usr/lib64/libwx_gtk3u_aui-3.1.so.2
+/usr/lib64/libwx_gtk3u_aui-3.1.so.2.0.0
+/usr/lib64/libwx_gtk3u_core-3.1.so.2
+/usr/lib64/libwx_gtk3u_core-3.1.so.2.0.0
+/usr/lib64/libwx_gtk3u_gl-3.1.so.2
+/usr/lib64/libwx_gtk3u_gl-3.1.so.2.0.0
+/usr/lib64/libwx_gtk3u_html-3.1.so.2
+/usr/lib64/libwx_gtk3u_html-3.1.so.2.0.0
+/usr/lib64/libwx_gtk3u_media-3.1.so.2
+/usr/lib64/libwx_gtk3u_media-3.1.so.2.0.0
+/usr/lib64/libwx_gtk3u_propgrid-3.1.so.2
+/usr/lib64/libwx_gtk3u_propgrid-3.1.so.2.0.0
+/usr/lib64/libwx_gtk3u_qa-3.1.so.2
+/usr/lib64/libwx_gtk3u_qa-3.1.so.2.0.0
+/usr/lib64/libwx_gtk3u_ribbon-3.1.so.2
+/usr/lib64/libwx_gtk3u_ribbon-3.1.so.2.0.0
+/usr/lib64/libwx_gtk3u_richtext-3.1.so.2
+/usr/lib64/libwx_gtk3u_richtext-3.1.so.2.0.0
+/usr/lib64/libwx_gtk3u_stc-3.1.so.2
+/usr/lib64/libwx_gtk3u_stc-3.1.so.2.0.0
+/usr/lib64/libwx_gtk3u_webview-3.1.so.2
+/usr/lib64/libwx_gtk3u_webview-3.1.so.2.0.0
+/usr/lib64/libwx_gtk3u_xrc-3.1.so.2
+/usr/lib64/libwx_gtk3u_xrc-3.1.so.2.0.0
+/usr/lib64/wx/3.1.2/web-extensions/webkit2_extu-3.1.2.so
 
 %files license
 %defattr(0644,root,root,0755)
@@ -933,41 +949,6 @@ popd
 /usr/share/package-licenses/wxWidgets/src_regex_COPYRIGHT
 /usr/share/package-licenses/wxWidgets/src_stc_scintilla_License.txt
 /usr/share/package-licenses/wxWidgets/src_tiff_COPYRIGHT
-
-%files plugins
-%defattr(-,root,root,-)
-/usr/lib/libwx_baseu-3.1.so.2
-/usr/lib/libwx_baseu-3.1.so.2.0.0
-/usr/lib/libwx_baseu_net-3.1.so.2
-/usr/lib/libwx_baseu_net-3.1.so.2.0.0
-/usr/lib/libwx_baseu_xml-3.1.so.2
-/usr/lib/libwx_baseu_xml-3.1.so.2.0.0
-/usr/lib/libwx_gtk3u_adv-3.1.so.2
-/usr/lib/libwx_gtk3u_adv-3.1.so.2.0.0
-/usr/lib/libwx_gtk3u_aui-3.1.so.2
-/usr/lib/libwx_gtk3u_aui-3.1.so.2.0.0
-/usr/lib/libwx_gtk3u_core-3.1.so.2
-/usr/lib/libwx_gtk3u_core-3.1.so.2.0.0
-/usr/lib/libwx_gtk3u_gl-3.1.so.2
-/usr/lib/libwx_gtk3u_gl-3.1.so.2.0.0
-/usr/lib/libwx_gtk3u_html-3.1.so.2
-/usr/lib/libwx_gtk3u_html-3.1.so.2.0.0
-/usr/lib/libwx_gtk3u_media-3.1.so.2
-/usr/lib/libwx_gtk3u_media-3.1.so.2.0.0
-/usr/lib/libwx_gtk3u_propgrid-3.1.so.2
-/usr/lib/libwx_gtk3u_propgrid-3.1.so.2.0.0
-/usr/lib/libwx_gtk3u_qa-3.1.so.2
-/usr/lib/libwx_gtk3u_qa-3.1.so.2.0.0
-/usr/lib/libwx_gtk3u_ribbon-3.1.so.2
-/usr/lib/libwx_gtk3u_ribbon-3.1.so.2.0.0
-/usr/lib/libwx_gtk3u_richtext-3.1.so.2
-/usr/lib/libwx_gtk3u_richtext-3.1.so.2.0.0
-/usr/lib/libwx_gtk3u_stc-3.1.so.2
-/usr/lib/libwx_gtk3u_stc-3.1.so.2.0.0
-/usr/lib/libwx_gtk3u_webview-3.1.so.2
-/usr/lib/libwx_gtk3u_webview-3.1.so.2.0.0
-/usr/lib/libwx_gtk3u_xrc-3.1.so.2
-/usr/lib/libwx_gtk3u_xrc-3.1.so.2.0.0
 
 %files locales -f wxstd.lang -f wxmsw.lang
 %defattr(-,root,root,-)

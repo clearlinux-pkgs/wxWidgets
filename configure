@@ -1,3 +1,4 @@
+--with-gtk=3
 --without-libtiff
 --enable-cxx11
 --enable-debug_gdb
