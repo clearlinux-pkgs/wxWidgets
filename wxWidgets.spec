@@ -4,10 +4,10 @@
 #
 %define keepstatic 1
 Name     : wxWidgets
-Version  : 3.1.2
-Release  : 6
-URL      : https://github.com/wxWidgets/wxWidgets/releases/download/v3.1.2/wxWidgets-3.1.2.tar.bz2
-Source0  : https://github.com/wxWidgets/wxWidgets/releases/download/v3.1.2/wxWidgets-3.1.2.tar.bz2
+Version  : 3.1.3
+Release  : 7
+URL      : https://github.com/wxWidgets/wxWidgets/releases/download/v3.1.3/wxWidgets-3.1.3.tar.bz2
+Source0  : https://github.com/wxWidgets/wxWidgets/releases/download/v3.1.3/wxWidgets-3.1.3.tar.bz2
 Summary  : Expat is an XML 1.0 parser written in C.
 Group    : Development/Tools
 License  : BSL-1.0 GPL-2.0 HPND LGPL-2.0 Libpng MIT TCL libtiff
@@ -19,11 +19,8 @@ Requires: wxWidgets-locales = %{version}-%{release}
 BuildRequires : buildreq-cmake
 BuildRequires : buildreq-scons
 BuildRequires : cairo-dev
-BuildRequires : freeglut-dev
 BuildRequires : glu-dev
 BuildRequires : libjpeg-turbo-dev
-BuildRequires : libwebp-dev
-BuildRequires : mesa-dev
 BuildRequires : pkgconfig(Qt5Core)
 BuildRequires : pkgconfig(Qt5Gui)
 BuildRequires : pkgconfig(Qt5OpenGL)
@@ -38,15 +35,14 @@ BuildRequires : pkgconfig(gstreamer-video-1.0)
 BuildRequires : pkgconfig(libmspack)
 BuildRequires : pkgconfig(libnotify)
 BuildRequires : pkgconfig(libsecret-1)
+BuildRequires : pkgconfig(libtiff-4)
 BuildRequires : pkgconfig(pangoft2)
 BuildRequires : pkgconfig(pangoxft)
 BuildRequires : pkgconfig(sdl)
 BuildRequires : pkgconfig(sdl2)
-BuildRequires : pkgconfig(sm)
 BuildRequires : pkgconfig(webkit2gtk-4.0)
 BuildRequires : pkgconfig(xtst)
 BuildRequires : tiff-dev
-BuildRequires : zstd-dev
 
 %description
 Expat is an XML 1.0 parser written in C by James Clark.  It aims to be
@@ -77,6 +73,7 @@ Requires: wxWidgets-lib = %{version}-%{release}
 Requires: wxWidgets-bin = %{version}-%{release}
 Requires: wxWidgets-data = %{version}-%{release}
 Provides: wxWidgets-devel = %{version}-%{release}
+Requires: wxWidgets = %{version}-%{release}
 
 %description dev
 dev components for the wxWidgets package.
@@ -109,14 +106,20 @@ locales components for the wxWidgets package.
 
 
 %prep
-%setup -q -n wxWidgets-3.1.2
+%setup -q -n wxWidgets-3.1.3
+cd %{_builddir}/wxWidgets-3.1.3
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
-export LANG=C
-export SOURCE_DATE_EPOCH=1550258296
+export LANG=C.UTF-8
+export SOURCE_DATE_EPOCH=1572626179
+export GCC_IGNORE_WERROR=1
+export CFLAGS="$CFLAGS -fno-lto "
+export FCFLAGS="$CFLAGS -fno-lto "
+export FFLAGS="$CFLAGS -fno-lto "
+export CXXFLAGS="$CXXFLAGS -fno-lto "
 %autogen  --with-gtk=3 \
 --without-libtiff \
 --enable-cxx11 \
@@ -126,20 +129,19 @@ export SOURCE_DATE_EPOCH=1550258296
 make  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1550258296
+export SOURCE_DATE_EPOCH=1572626179
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/wxWidgets
-cp 3rdparty/catch/LICENSE.txt %{buildroot}/usr/share/package-licenses/wxWidgets/3rdparty_catch_LICENSE.txt
-cp docs/gpl.txt %{buildroot}/usr/share/package-licenses/wxWidgets/docs_gpl.txt
-cp docs/licence.txt %{buildroot}/usr/share/package-licenses/wxWidgets/docs_licence.txt
-cp docs/wine/COPYING.LIB %{buildroot}/usr/share/package-licenses/wxWidgets/docs_wine_COPYING.LIB
-cp src/expat/expat/COPYING %{buildroot}/usr/share/package-licenses/wxWidgets/src_expat_expat_COPYING
-cp src/motif/mdi/COPYRIGHT %{buildroot}/usr/share/package-licenses/wxWidgets/src_motif_mdi_COPYRIGHT
-cp src/motif/xmcombo/copying.txt %{buildroot}/usr/share/package-licenses/wxWidgets/src_motif_xmcombo_copying.txt
-cp src/png/LICENSE %{buildroot}/usr/share/package-licenses/wxWidgets/src_png_LICENSE
-cp src/regex/COPYRIGHT %{buildroot}/usr/share/package-licenses/wxWidgets/src_regex_COPYRIGHT
-cp src/stc/scintilla/License.txt %{buildroot}/usr/share/package-licenses/wxWidgets/src_stc_scintilla_License.txt
-cp src/tiff/COPYRIGHT %{buildroot}/usr/share/package-licenses/wxWidgets/src_tiff_COPYRIGHT
+cp %{_builddir}/wxWidgets-3.1.3/3rdparty/catch/LICENSE.txt %{buildroot}/usr/share/package-licenses/wxWidgets/3cba29011be2b9d59f6204d6fa0a386b1b2dbd90
+cp %{_builddir}/wxWidgets-3.1.3/docs/gpl.txt %{buildroot}/usr/share/package-licenses/wxWidgets/a004b027854dfbec1307bf978dc5d1dd77ecd04c
+cp %{_builddir}/wxWidgets-3.1.3/docs/wine/COPYING.LIB %{buildroot}/usr/share/package-licenses/wxWidgets/ec2350cf4fe9c4f97c3ee5c9046d0396672c365a
+cp %{_builddir}/wxWidgets-3.1.3/src/expat/expat/COPYING %{buildroot}/usr/share/package-licenses/wxWidgets/1830cf88edd943aadba8ca7504d45113ca3431a2
+cp %{_builddir}/wxWidgets-3.1.3/src/motif/mdi/COPYRIGHT %{buildroot}/usr/share/package-licenses/wxWidgets/3f65d8e23a75d7c0a9a7b7092c9249e4f8cd2db4
+cp %{_builddir}/wxWidgets-3.1.3/src/motif/xmcombo/copying.txt %{buildroot}/usr/share/package-licenses/wxWidgets/17e3b0eea99abffe6ac71e65627413236e0b117a
+cp %{_builddir}/wxWidgets-3.1.3/src/png/LICENSE %{buildroot}/usr/share/package-licenses/wxWidgets/113aaf5f7de2615f71219b6f0251755ad481d43e
+cp %{_builddir}/wxWidgets-3.1.3/src/regex/COPYRIGHT %{buildroot}/usr/share/package-licenses/wxWidgets/9a5a0d7c8ffa82a9489acbb7f0d6947a2b1bc27f
+cp %{_builddir}/wxWidgets-3.1.3/src/stc/scintilla/License.txt %{buildroot}/usr/share/package-licenses/wxWidgets/9da27f7b263edb706105ccd68880474013b11bca
+cp %{_builddir}/wxWidgets-3.1.3/src/tiff/COPYRIGHT %{buildroot}/usr/share/package-licenses/wxWidgets/a2f64f2a85f5fd34bda8eb713c3aad008adbb589
 %make_install
 %find_lang wxstd
 %find_lang wxmsw
@@ -820,6 +822,7 @@ cp src/tiff/COPYRIGHT %{buildroot}/usr/share/package-licenses/wxWidgets/src_tiff
 /usr/include/wx-3.1/wx/xrc/xh_collpane.h
 /usr/include/wx-3.1/wx/xrc/xh_combo.h
 /usr/include/wx-3.1/wx/xrc/xh_comboctrl.h
+/usr/include/wx-3.1/wx/xrc/xh_dataview.h
 /usr/include/wx-3.1/wx/xrc/xh_datectrl.h
 /usr/include/wx-3.1/wx/xrc/xh_dirpicker.h
 /usr/include/wx-3.1/wx/xrc/xh_dlg.h
@@ -834,6 +837,7 @@ cp src/tiff/COPYRIGHT %{buildroot}/usr/share/package-licenses/wxWidgets/src_tiff
 /usr/include/wx-3.1/wx/xrc/xh_html.h
 /usr/include/wx-3.1/wx/xrc/xh_htmllbox.h
 /usr/include/wx-3.1/wx/xrc/xh_hyperlink.h
+/usr/include/wx-3.1/wx/xrc/xh_infobar.h
 /usr/include/wx-3.1/wx/xrc/xh_listb.h
 /usr/include/wx-3.1/wx/xrc/xh_listbk.h
 /usr/include/wx-3.1/wx/xrc/xh_listc.h
@@ -902,53 +906,52 @@ cp src/tiff/COPYRIGHT %{buildroot}/usr/share/package-licenses/wxWidgets/src_tiff
 
 %files lib
 %defattr(-,root,root,-)
-/usr/lib64/libwx_baseu-3.1.so.2
-/usr/lib64/libwx_baseu-3.1.so.2.0.0
-/usr/lib64/libwx_baseu_net-3.1.so.2
-/usr/lib64/libwx_baseu_net-3.1.so.2.0.0
-/usr/lib64/libwx_baseu_xml-3.1.so.2
-/usr/lib64/libwx_baseu_xml-3.1.so.2.0.0
-/usr/lib64/libwx_gtk3u_adv-3.1.so.2
-/usr/lib64/libwx_gtk3u_adv-3.1.so.2.0.0
-/usr/lib64/libwx_gtk3u_aui-3.1.so.2
-/usr/lib64/libwx_gtk3u_aui-3.1.so.2.0.0
-/usr/lib64/libwx_gtk3u_core-3.1.so.2
-/usr/lib64/libwx_gtk3u_core-3.1.so.2.0.0
-/usr/lib64/libwx_gtk3u_gl-3.1.so.2
-/usr/lib64/libwx_gtk3u_gl-3.1.so.2.0.0
-/usr/lib64/libwx_gtk3u_html-3.1.so.2
-/usr/lib64/libwx_gtk3u_html-3.1.so.2.0.0
-/usr/lib64/libwx_gtk3u_media-3.1.so.2
-/usr/lib64/libwx_gtk3u_media-3.1.so.2.0.0
-/usr/lib64/libwx_gtk3u_propgrid-3.1.so.2
-/usr/lib64/libwx_gtk3u_propgrid-3.1.so.2.0.0
-/usr/lib64/libwx_gtk3u_qa-3.1.so.2
-/usr/lib64/libwx_gtk3u_qa-3.1.so.2.0.0
-/usr/lib64/libwx_gtk3u_ribbon-3.1.so.2
-/usr/lib64/libwx_gtk3u_ribbon-3.1.so.2.0.0
-/usr/lib64/libwx_gtk3u_richtext-3.1.so.2
-/usr/lib64/libwx_gtk3u_richtext-3.1.so.2.0.0
-/usr/lib64/libwx_gtk3u_stc-3.1.so.2
-/usr/lib64/libwx_gtk3u_stc-3.1.so.2.0.0
-/usr/lib64/libwx_gtk3u_webview-3.1.so.2
-/usr/lib64/libwx_gtk3u_webview-3.1.so.2.0.0
-/usr/lib64/libwx_gtk3u_xrc-3.1.so.2
-/usr/lib64/libwx_gtk3u_xrc-3.1.so.2.0.0
-/usr/lib64/wx/3.1.2/web-extensions/webkit2_extu-3.1.2.so
+/usr/lib64/libwx_baseu-3.1.so.3
+/usr/lib64/libwx_baseu-3.1.so.3.0.0
+/usr/lib64/libwx_baseu_net-3.1.so.3
+/usr/lib64/libwx_baseu_net-3.1.so.3.0.0
+/usr/lib64/libwx_baseu_xml-3.1.so.3
+/usr/lib64/libwx_baseu_xml-3.1.so.3.0.0
+/usr/lib64/libwx_gtk3u_adv-3.1.so.3
+/usr/lib64/libwx_gtk3u_adv-3.1.so.3.0.0
+/usr/lib64/libwx_gtk3u_aui-3.1.so.3
+/usr/lib64/libwx_gtk3u_aui-3.1.so.3.0.0
+/usr/lib64/libwx_gtk3u_core-3.1.so.3
+/usr/lib64/libwx_gtk3u_core-3.1.so.3.0.0
+/usr/lib64/libwx_gtk3u_gl-3.1.so.3
+/usr/lib64/libwx_gtk3u_gl-3.1.so.3.0.0
+/usr/lib64/libwx_gtk3u_html-3.1.so.3
+/usr/lib64/libwx_gtk3u_html-3.1.so.3.0.0
+/usr/lib64/libwx_gtk3u_media-3.1.so.3
+/usr/lib64/libwx_gtk3u_media-3.1.so.3.0.0
+/usr/lib64/libwx_gtk3u_propgrid-3.1.so.3
+/usr/lib64/libwx_gtk3u_propgrid-3.1.so.3.0.0
+/usr/lib64/libwx_gtk3u_qa-3.1.so.3
+/usr/lib64/libwx_gtk3u_qa-3.1.so.3.0.0
+/usr/lib64/libwx_gtk3u_ribbon-3.1.so.3
+/usr/lib64/libwx_gtk3u_ribbon-3.1.so.3.0.0
+/usr/lib64/libwx_gtk3u_richtext-3.1.so.3
+/usr/lib64/libwx_gtk3u_richtext-3.1.so.3.0.0
+/usr/lib64/libwx_gtk3u_stc-3.1.so.3
+/usr/lib64/libwx_gtk3u_stc-3.1.so.3.0.0
+/usr/lib64/libwx_gtk3u_webview-3.1.so.3
+/usr/lib64/libwx_gtk3u_webview-3.1.so.3.0.0
+/usr/lib64/libwx_gtk3u_xrc-3.1.so.3
+/usr/lib64/libwx_gtk3u_xrc-3.1.so.3.0.0
+/usr/lib64/wx/3.1.3/web-extensions/webkit2_extu-3.1.3.so
 
 %files license
 %defattr(0644,root,root,0755)
-/usr/share/package-licenses/wxWidgets/3rdparty_catch_LICENSE.txt
-/usr/share/package-licenses/wxWidgets/docs_gpl.txt
-/usr/share/package-licenses/wxWidgets/docs_licence.txt
-/usr/share/package-licenses/wxWidgets/docs_wine_COPYING.LIB
-/usr/share/package-licenses/wxWidgets/src_expat_expat_COPYING
-/usr/share/package-licenses/wxWidgets/src_motif_mdi_COPYRIGHT
-/usr/share/package-licenses/wxWidgets/src_motif_xmcombo_copying.txt
-/usr/share/package-licenses/wxWidgets/src_png_LICENSE
-/usr/share/package-licenses/wxWidgets/src_regex_COPYRIGHT
-/usr/share/package-licenses/wxWidgets/src_stc_scintilla_License.txt
-/usr/share/package-licenses/wxWidgets/src_tiff_COPYRIGHT
+/usr/share/package-licenses/wxWidgets/113aaf5f7de2615f71219b6f0251755ad481d43e
+/usr/share/package-licenses/wxWidgets/17e3b0eea99abffe6ac71e65627413236e0b117a
+/usr/share/package-licenses/wxWidgets/1830cf88edd943aadba8ca7504d45113ca3431a2
+/usr/share/package-licenses/wxWidgets/3cba29011be2b9d59f6204d6fa0a386b1b2dbd90
+/usr/share/package-licenses/wxWidgets/3f65d8e23a75d7c0a9a7b7092c9249e4f8cd2db4
+/usr/share/package-licenses/wxWidgets/9a5a0d7c8ffa82a9489acbb7f0d6947a2b1bc27f
+/usr/share/package-licenses/wxWidgets/9da27f7b263edb706105ccd68880474013b11bca
+/usr/share/package-licenses/wxWidgets/a004b027854dfbec1307bf978dc5d1dd77ecd04c
+/usr/share/package-licenses/wxWidgets/a2f64f2a85f5fd34bda8eb713c3aad008adbb589
+/usr/share/package-licenses/wxWidgets/ec2350cf4fe9c4f97c3ee5c9046d0396672c365a
 
 %files locales -f wxstd.lang -f wxmsw.lang
 %defattr(-,root,root,-)
