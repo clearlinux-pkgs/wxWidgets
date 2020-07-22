@@ -12,5 +12,4 @@ Configure miss: if vsscanf() declaration is broken
 Configure miss: putws
 Configure miss: _vsnwprintf
 Configure miss: if iconv needs const
-Configure miss: dlerror
 Configure miss: dladdr
