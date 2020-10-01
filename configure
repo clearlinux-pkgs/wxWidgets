@@ -4,3 +4,4 @@
 --enable-debug_gdb
 --enable-utf8
 --enable-notebook
+--enable-compat28

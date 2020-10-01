@@ -1,3 +1,5 @@
+libwx_baseu-3.1.so.4:ConvertFromIeeeExtended
+libwx_baseu-3.1.so.4:ConvertToIeeeExtended
 libwx_baseu-3.1.so.4:WXU_3.1
 libwx_baseu-3.1.so.4:_Z10wxCopyFileRK8wxStringS1_b
 libwx_baseu-3.1.so.4:_Z10wxDecToHexh
@@ -15,6 +17,9 @@ libwx_baseu-3.1.so.4:_Z10wxOnAssertRK8wxStringiS1_S1_
 libwx_baseu-3.1.so.4:_Z10wxOnAssertRK8wxStringiS1_S1_S1_
 libwx_baseu-3.1.so.4:_Z10wxPathOnlyRK8wxString
 libwx_baseu-3.1.so.4:_Z10wxPrevWDayRN10wxDateTime7WeekDayE
+libwx_baseu-3.1.so.4:_Z10wxRealPathPc
+libwx_baseu-3.1.so.4:_Z10wxRealPathPw
+libwx_baseu-3.1.so.4:_Z10wxRealPathRK8wxString
 libwx_baseu-3.1.so.4:_Z10wxShutdowni
 libwx_baseu-3.1.so.4:_Z10wxUnsetEnvRK8wxString
 libwx_baseu-3.1.so.4:_Z10wxVsprintfPcRK8wxStringP13__va_list_tag
@@ -30,11 +35,14 @@ libwx_baseu-3.1.so.4:_Z11wxNextMonthRN10wxDateTime5MonthE
 libwx_baseu-3.1.so.4:_Z11wxPrevMonthRN10wxDateTime5MonthE
 libwx_baseu-3.1.so.4:_Z11wxSetlocaleiPKc
 libwx_baseu-3.1.so.4:_Z11wxSplitPathR13wxArrayStringRK8wxString
+libwx_baseu-3.1.so.4:_Z11wxSplitPathRK8wxStringPS_S2_S2_
 libwx_baseu-3.1.so.4:_Z11wxVsnprintfPcmRK8wxStringP13__va_list_tag
 libwx_baseu-3.1.so.4:_Z11wxVsnprintfPwmRK8wxStringP13__va_list_tag
 libwx_baseu-3.1.so.4:_Z12wxCRT_FputcWwP8_IO_FILE
 libwx_baseu-3.1.so.4:_Z12wxEntryStartRiPPc
 libwx_baseu-3.1.so.4:_Z12wxEntryStartRiPPw
+libwx_baseu-3.1.so.4:_Z12wxExpandPathPcRK8wxString
+libwx_baseu-3.1.so.4:_Z12wxExpandPathPwRK8wxString
 libwx_baseu-3.1.so.4:_Z12wxFileExistsRK8wxString
 libwx_baseu-3.1.so.4:_Z12wxGetDataDirv
 libwx_baseu-3.1.so.4:_Z12wxGetHomeDirP8wxString
@@ -66,6 +74,7 @@ libwx_baseu-3.1.so.4:_Z13wxSysErrorMsgm
 libwx_baseu-3.1.so.4:_Z14wxBase64DecodePKcm18wxBase64DecodeModePm
 libwx_baseu-3.1.so.4:_Z14wxBase64DecodePvmPKcm18wxBase64DecodeModePm
 libwx_baseu-3.1.so.4:_Z14wxBase64EncodePcmPKvm
+libwx_baseu-3.1.so.4:_Z14wxContractPathRK8wxStringS1_S1_
 libwx_baseu-3.1.so.4:_Z14wxEntryCleanupv
 libwx_baseu-3.1.so.4:_Z14wxFindNextFilev
 libwx_baseu-3.1.so.4:_Z14wxGetCurrentIdv
@@ -96,6 +105,9 @@ libwx_baseu-3.1.so.4:_Z16wxGetOSDirectoryv
 libwx_baseu-3.1.so.4:_Z16wxGetUTCTimeUSecv
 libwx_baseu-3.1.so.4:_Z16wxIsAbsolutePathRK8wxString
 libwx_baseu-3.1.so.4:_Z16wxStringTokenizeRK8wxStringS1_21wxStringTokenizerMode
+libwx_baseu-3.1.so.4:_Z16wxStripExtensionPc
+libwx_baseu-3.1.so.4:_Z16wxStripExtensionPw
+libwx_baseu-3.1.so.4:_Z16wxStripExtensionR8wxString
 libwx_baseu-3.1.so.4:_Z16wxSysErrorMsgStrm
 libwx_baseu-3.1.so.4:_Z17wxDoSnprintfWcharPcmPKwz
 libwx_baseu-3.1.so.4:_Z17wxDoSnprintfWcharPwmPKwz
@@ -104,16 +116,23 @@ libwx_baseu-3.1.so.4:_Z17wxGetEmailAddressPwi
 libwx_baseu-3.1.so.4:_Z17wxGetEmailAddressv
 libwx_baseu-3.1.so.4:_Z17wxGetFullHostNamePwi
 libwx_baseu-3.1.so.4:_Z17wxGetFullHostNamev
+libwx_baseu-3.1.so.4:_Z17wxGetTempFileNameRK8wxStringPw
+libwx_baseu-3.1.so.4:_Z17wxGetTempFileNameRK8wxStringRS_
 libwx_baseu-3.1.so.4:_Z17wxIsPlatform64Bitv
 libwx_baseu-3.1.so.4:_Z17wxSafeShowMessageRK8wxStringS1_
 libwx_baseu-3.1.so.4:_Z18new_wxMBConv_iconvPKc
 libwx_baseu-3.1.so.4:_Z18new_wxMBConv_wxwinPKc
 libwx_baseu-3.1.so.4:_Z18wxAnyConvertStringRK8wxStringP14wxAnyValueTypeR16wxAnyValueBuffer
+libwx_baseu-3.1.so.4:_Z18wxCopyAbsolutePathRK8wxString
+libwx_baseu-3.1.so.4:_Z18wxDos2UnixFilenamePc
+libwx_baseu-3.1.so.4:_Z18wxDos2UnixFilenamePw
 libwx_baseu-3.1.so.4:_Z18wxFileNameFromPathPw
 libwx_baseu-3.1.so.4:_Z18wxFileNameFromPathRK8wxString
 libwx_baseu-3.1.so.4:_Z18wxGetInstallPrefixv
 libwx_baseu-3.1.so.4:_Z18wxGetOsDescriptionv
 libwx_baseu-3.1.so.4:_Z18wxGetUTCTimeMillisv
+libwx_baseu-3.1.so.4:_Z18wxUnix2DosFilenamePc
+libwx_baseu-3.1.so.4:_Z18wxUnix2DosFilenamePw
 libwx_baseu-3.1.so.4:_Z18wxUseFilterClassesv
 libwx_baseu-3.1.so.4:_Z19wxCmpNaturalGenericRK8wxStringS1_
 libwx_baseu-3.1.so.4:_Z19wxGet_wxConvLibcPtrv
@@ -171,6 +190,7 @@ libwx_baseu-3.1.so.4:_Z8wxPerrorRK8wxString
 libwx_baseu-3.1.so.4:_Z8wxSetEnvRK8wxStringS1_
 libwx_baseu-3.1.so.4:_Z8wxStrdupPKt
 libwx_baseu-3.1.so.4:_Z8wxStrlenPKt
+libwx_baseu-3.1.so.4:_Z8wxUsleepm
 libwx_baseu-3.1.so.4:_Z9wxExecutePKPKciP9wxProcessPK12wxExecuteEnv
 libwx_baseu-3.1.so.4:_Z9wxExecutePKPKwiP9wxProcessPK12wxExecuteEnv
 libwx_baseu-3.1.so.4:_Z9wxExecuteRK8wxStringR13wxArrayStringS3_iPK12wxExecuteEnv
@@ -1773,6 +1793,8 @@ libwx_baseu-3.1.so.4:_ZN5wxLog21LogLastRepeatIfNeededEv
 libwx_baseu-3.1.so.4:_ZN5wxLog21SetThreadActiveTargetEPS_
 libwx_baseu-3.1.so.4:_ZN5wxLog22IsThreadLoggingEnabledEv
 libwx_baseu-3.1.so.4:_ZN5wxLog25GetMainThreadActiveTargetEv
+libwx_baseu-3.1.so.4:_ZN5wxLog5DoLogEmPKcl
+libwx_baseu-3.1.so.4:_ZN5wxLog5DoLogEmPKwl
 libwx_baseu-3.1.so.4:_ZN5wxLog5FlushEv
 libwx_baseu-3.1.so.4:_ZN5wxLog5OnLogEmRK8wxStringRK15wxLogRecordInfo
 libwx_baseu-3.1.so.4:_ZN5wxLog5OnLogEmRK8wxStringl
@@ -1896,7 +1918,7 @@ libwx_baseu-3.1.so.4:_ZN8wxLocale17GetSystemLanguageEv
 libwx_baseu-3.1.so.4:_ZN8wxLocale18DestroyLanguagesDBEv
 libwx_baseu-3.1.so.4:_ZN8wxLocale21GetSystemEncodingNameEv
 libwx_baseu-3.1.so.4:_ZN8wxLocale24GetLanguageCanonicalNameEi
-libwx_baseu-3.1.so.4:_ZN8wxLocale4InitERK8wxStringS2_S2_b
+libwx_baseu-3.1.so.4:_ZN8wxLocale4InitERK8wxStringS2_S2_bb
 libwx_baseu-3.1.so.4:_ZN8wxLocale4InitEii
 libwx_baseu-3.1.so.4:_ZN8wxLocale6DoInitERK8wxStringS2_i
 libwx_baseu-3.1.so.4:_ZN8wxLocale7GetInfoE12wxLocaleInfo16wxLocaleCategory
@@ -3590,6 +3612,8 @@ libwx_gtk3u_core-3.1.so.4:_Z19wxFindWindowByLabelRK8wxStringP8wxWindow
 libwx_gtk3u_core-3.1.so.4:_Z19wxGetColourFromUserP8wxWindowRK8wxColourRK8wxStringP12wxColourData
 libwx_gtk3u_core-3.1.so.4:_Z19wxGetNumberFromUserRK8wxStringS1_S1_lllP8wxWindowRK7wxPoint
 libwx_gtk3u_core-3.1.so.4:_Z19wxGetTopLevelParentP12wxWindowBase
+libwx_gtk3u_core-3.1.so.4:_Z20wxGetMultipleChoicesR10wxArrayIntRK8wxStringS3_RK13wxArrayStringP8wxWindowiibii
+libwx_gtk3u_core-3.1.so.4:_Z20wxGetMultipleChoicesR10wxArrayIntRK8wxStringS3_iPS2_P8wxWindowiibii
 libwx_gtk3u_core-3.1.so.4:_Z20wxGetSelectedChoicesR10wxArrayIntRK8wxStringS3_RK13wxArrayStringP8wxWindowiibii
 libwx_gtk3u_core-3.1.so.4:_Z20wxGetSelectedChoicesR10wxArrayIntRK8wxStringS3_iPS2_P8wxWindowiibii
 libwx_gtk3u_core-3.1.so.4:_Z20wxGetStockHelpStringi23wxStockHelpStringClient
@@ -3898,7 +3922,9 @@ libwx_gtk3u_core-3.1.so.4:_ZN10wxMenuItem5CheckEb
 libwx_gtk3u_core-3.1.so.4:_ZN10wxMenuItem6EnableEb
 libwx_gtk3u_core-3.1.so.4:_ZN10wxMenuItem9SetBitmapERK8wxBitmap
 libwx_gtk3u_core-3.1.so.4:_ZN10wxMenuItemC1EP6wxMenuiRK8wxStringS4_10wxItemKindS1_
+libwx_gtk3u_core-3.1.so.4:_ZN10wxMenuItemC1EP6wxMenuiRK8wxStringS4_bS1_
 libwx_gtk3u_core-3.1.so.4:_ZN10wxMenuItemC2EP6wxMenuiRK8wxStringS4_10wxItemKindS1_
+libwx_gtk3u_core-3.1.so.4:_ZN10wxMenuItemC2EP6wxMenuiRK8wxStringS4_bS1_
 libwx_gtk3u_core-3.1.so.4:_ZN10wxMenuItemD0Ev
 libwx_gtk3u_core-3.1.so.4:_ZN10wxMenuItemD1Ev
 libwx_gtk3u_core-3.1.so.4:_ZN10wxMenuItemD2Ev
@@ -4612,6 +4638,7 @@ libwx_gtk3u_core-3.1.so.4:_ZN12wxDocManager14SelectViewTypeEPP13wxDocTemplateib
 libwx_gtk3u_core-3.1.so.4:_ZN12wxDocManager14wxCreateObjectEv
 libwx_gtk3u_core-3.1.so.4:_ZN12wxDocManager15FileHistoryLoadERK12wxConfigBase
 libwx_gtk3u_core-3.1.so.4:_ZN12wxDocManager15FileHistorySaveER12wxConfigBase
+libwx_gtk3u_core-3.1.so.4:_ZN12wxDocManager15MakeDefaultNameER8wxString
 libwx_gtk3u_core-3.1.so.4:_ZN12wxDocManager15OnUpdateFileNewER15wxUpdateUIEvent
 libwx_gtk3u_core-3.1.so.4:_ZN12wxDocManager16AddFileToHistoryERK8wxString
 libwx_gtk3u_core-3.1.so.4:_ZN12wxDocManager16OnUpdateFileOpenER15wxUpdateUIEvent
@@ -4975,6 +5002,7 @@ libwx_gtk3u_core-3.1.so.4:_ZN12wxWindowBase16FindWindowByNameERK8wxStringPK8wxWi
 libwx_gtk3u_core-3.1.so.4:_ZN12wxWindowBase16PushEventHandlerEP12wxEvtHandler
 libwx_gtk3u_core-3.1.so.4:_ZN12wxWindowBase16ResetConstraintsEv
 libwx_gtk3u_core-3.1.so.4:_ZN12wxWindowBase16SendDestroyEventEv
+libwx_gtk3u_core-3.1.so.4:_ZN12wxWindowBase16SetHelpTextForIdERK8wxString
 libwx_gtk3u_core-3.1.so.4:_ZN12wxWindowBase16SetWindowVariantE15wxWindowVariant
 libwx_gtk3u_core-3.1.so.4:_ZN12wxWindowBase16UnsetConstraintsEP19wxLayoutConstraints
 libwx_gtk3u_core-3.1.so.4:_ZN12wxWindowBase17FindWindowByLabelERK8wxStringPK8wxWindow
@@ -4994,6 +5022,8 @@ libwx_gtk3u_core-3.1.so.4:_ZN12wxWindowBase18SetPreviousHandlerEP12wxEvtHandler
 libwx_gtk3u_core-3.1.so.4:_ZN12wxWindowBase19InternalOnPopupMenuER14wxCommandEvent
 libwx_gtk3u_core-3.1.so.4:_ZN12wxWindowBase19SetBackgroundColourERK8wxColour
 libwx_gtk3u_core-3.1.so.4:_ZN12wxWindowBase19SetForegroundColourERK8wxColour
+libwx_gtk3u_core-3.1.so.4:_ZN12wxWindowBase19SetVirtualSizeHintsERK6wxSizeS2_
+libwx_gtk3u_core-3.1.so.4:_ZN12wxWindowBase19SetVirtualSizeHintsEiiii
 libwx_gtk3u_core-3.1.so.4:_ZN12wxWindowBase20InformFirstDirectionEiii
 libwx_gtk3u_core-3.1.so.4:_ZN12wxWindowBase20TransferDataToWindowEv
 libwx_gtk3u_core-3.1.so.4:_ZN12wxWindowBase21HandleAsNavigationKeyERK10wxKeyEvent
@@ -5027,6 +5057,7 @@ libwx_gtk3u_core-3.1.so.4:_ZN12wxWindowBase8TryAfterER7wxEvent
 libwx_gtk3u_core-3.1.so.4:_ZN12wxWindowBase8ValidateEv
 libwx_gtk3u_core-3.1.so.4:_ZN12wxWindowBase9FindFocusEv
 libwx_gtk3u_core-3.1.so.4:_ZN12wxWindowBase9FitInsideEv
+libwx_gtk3u_core-3.1.so.4:_ZN12wxWindowBase9MakeModalEb
 libwx_gtk3u_core-3.1.so.4:_ZN12wxWindowBase9PopupMenuEP6wxMenuii
 libwx_gtk3u_core-3.1.so.4:_ZN12wxWindowBase9SetCursorERK8wxCursor
 libwx_gtk3u_core-3.1.so.4:_ZN12wxWindowBase9SetParentEPS_
@@ -5061,6 +5092,7 @@ libwx_gtk3u_core-3.1.so.4:_ZN13wxArtProvider20CommonAddingProviderEv
 libwx_gtk3u_core-3.1.so.4:_ZN13wxArtProvider3PopEv
 libwx_gtk3u_core-3.1.so.4:_ZN13wxArtProvider4PushEPS_
 libwx_gtk3u_core-3.1.so.4:_ZN13wxArtProvider6DeleteEPS_
+libwx_gtk3u_core-3.1.so.4:_ZN13wxArtProvider6InsertEPS_
 libwx_gtk3u_core-3.1.so.4:_ZN13wxArtProvider6RemoveEPS_
 libwx_gtk3u_core-3.1.so.4:_ZN13wxArtProvider7GetIconERK8wxStringS2_RK6wxSize
 libwx_gtk3u_core-3.1.so.4:_ZN13wxArtProvider8PushBackEPS_
@@ -5115,6 +5147,12 @@ libwx_gtk3u_core-3.1.so.4:_ZN13wxDocTemplateC2EP12wxDocManagerRK8wxStringS4_S4_S
 libwx_gtk3u_core-3.1.so.4:_ZN13wxDocTemplateD0Ev
 libwx_gtk3u_core-3.1.so.4:_ZN13wxDocTemplateD1Ev
 libwx_gtk3u_core-3.1.so.4:_ZN13wxDocTemplateD2Ev
+libwx_gtk3u_core-3.1.so.4:_ZN13wxEffectsImpl10TileBitmapERK6wxRectR4wxDCRK8wxBitmap
+libwx_gtk3u_core-3.1.so.4:_ZN13wxEffectsImpl14DrawSunkenEdgeER4wxDCRK6wxRecti
+libwx_gtk3u_core-3.1.so.4:_ZN13wxEffectsImplC1ERK8wxColourS2_S2_S2_S2_
+libwx_gtk3u_core-3.1.so.4:_ZN13wxEffectsImplC1Ev
+libwx_gtk3u_core-3.1.so.4:_ZN13wxEffectsImplC2ERK8wxColourS2_S2_S2_S2_
+libwx_gtk3u_core-3.1.so.4:_ZN13wxEffectsImplC2Ev
 libwx_gtk3u_core-3.1.so.4:_ZN13wxFileHistory14wxCreateObjectEv
 libwx_gtk3u_core-3.1.so.4:_ZN13wxFileHistory16AddFileToHistoryERK8wxString
 libwx_gtk3u_core-3.1.so.4:_ZN13wxGBSizerItem10IntersectsERK12wxGBPositionRK8wxGBSpan
@@ -5166,6 +5204,7 @@ libwx_gtk3u_core-3.1.so.4:_ZN13wxListBoxBaseD2Ev
 libwx_gtk3u_core-3.1.so.4:_ZN13wxLogTextCtrl9DoLogTextERK8wxString
 libwx_gtk3u_core-3.1.so.4:_ZN13wxLogTextCtrlC1EP10wxTextCtrl
 libwx_gtk3u_core-3.1.so.4:_ZN13wxLogTextCtrlC2EP10wxTextCtrl
+libwx_gtk3u_core-3.1.so.4:_ZN13wxMenuBarBase11SetLabelTopEmRK8wxString
 libwx_gtk3u_core-3.1.so.4:_ZN13wxMenuBarBase11UpdateMenusEv
 libwx_gtk3u_core-3.1.so.4:_ZN13wxMenuBarBase13SetHelpStringEiRK8wxString
 libwx_gtk3u_core-3.1.so.4:_ZN13wxMenuBarBase5CheckEib
@@ -5577,6 +5616,7 @@ libwx_gtk3u_core-3.1.so.4:_ZN14wxMarkupParser5StripERK8wxString
 libwx_gtk3u_core-3.1.so.4:_ZN14wxMarkupParser9OutputTagERKNS_11TagAndAttrsEb
 libwx_gtk3u_core-3.1.so.4:_ZN14wxMenuItemBase12GetLabelTextERK8wxString
 libwx_gtk3u_core-3.1.so.4:_ZN14wxMenuItemBase12SetItemLabelERK8wxString
+libwx_gtk3u_core-3.1.so.4:_ZN14wxMenuItemBase16GetLabelFromTextERK8wxString
 libwx_gtk3u_core-3.1.so.4:_ZN14wxMenuItemBase3NewEP6wxMenuiRK8wxStringS4_10wxItemKindS1_
 libwx_gtk3u_core-3.1.so.4:_ZN14wxMenuItemBase7SetHelpERK8wxString
 libwx_gtk3u_core-3.1.so.4:_ZN14wxMenuItemBase8SetAccelEP18wxAcceleratorEntry
@@ -5837,6 +5877,7 @@ libwx_gtk3u_core-3.1.so.4:_ZN15wxComboCtrlBase12SetSelectionEll
 libwx_gtk3u_core-3.1.so.4:_ZN15wxComboCtrlBase13GetButtonSizeEv
 libwx_gtk3u_core-3.1.so.4:_ZN15wxComboCtrlBase13OnButtonClickEv
 libwx_gtk3u_core-3.1.so.4:_ZN15wxComboCtrlBase13OnThemeChangeEv
+libwx_gtk3u_core-3.1.so.4:_ZN15wxComboCtrlBase13SetTextIndentEi
 libwx_gtk3u_core-3.1.so.4:_ZN15wxComboCtrlBase14CalculateAreasEi
 libwx_gtk3u_core-3.1.so.4:_ZN15wxComboCtrlBase14CreateTextCtrlEi
 libwx_gtk3u_core-3.1.so.4:_ZN15wxComboCtrlBase14OnPopupDismissEb
@@ -6931,6 +6972,7 @@ libwx_gtk3u_core-3.1.so.4:_ZN17wxTextEntryDialog10ForceUpperEv
 libwx_gtk3u_core-3.1.so.4:_ZN17wxTextEntryDialog12SetMaxLengthEm
 libwx_gtk3u_core-3.1.so.4:_ZN17wxTextEntryDialog16SetTextValidatorE20wxTextValidatorStyle
 libwx_gtk3u_core-3.1.so.4:_ZN17wxTextEntryDialog16SetTextValidatorERK15wxTextValidator
+libwx_gtk3u_core-3.1.so.4:_ZN17wxTextEntryDialog16SetTextValidatorEl
 libwx_gtk3u_core-3.1.so.4:_ZN17wxTextEntryDialog20TransferDataToWindowEv
 libwx_gtk3u_core-3.1.so.4:_ZN17wxTextEntryDialog22TransferDataFromWindowEv
 libwx_gtk3u_core-3.1.so.4:_ZN17wxTextEntryDialog4OnOKER14wxCommandEvent
@@ -7465,6 +7507,7 @@ libwx_gtk3u_core-3.1.so.4:_ZN19wxDirFilterListCtrl4InitEv
 libwx_gtk3u_core-3.1.so.4:_ZN19wxDirFilterListCtrl6CreateEP16wxGenericDirCtrliRK7wxPointRK6wxSizel
 libwx_gtk3u_core-3.1.so.4:_ZN19wxExtHelpController10DeleteListEv
 libwx_gtk3u_core-3.1.so.4:_ZN19wxExtHelpController10InitializeERK8wxString
+libwx_gtk3u_core-3.1.so.4:_ZN19wxExtHelpController10SetBrowserERK8wxStringb
 libwx_gtk3u_core-3.1.so.4:_ZN19wxExtHelpController11DisplayHelpERK8wxString
 libwx_gtk3u_core-3.1.so.4:_ZN19wxExtHelpController12DisplayBlockEl
 libwx_gtk3u_core-3.1.so.4:_ZN19wxExtHelpController13KeywordSearchERK8wxString16wxHelpSearchMode
@@ -8361,6 +8404,12 @@ libwx_gtk3u_core-3.1.so.4:_ZN25wxNotificationMessageBase9SetParentEP8wxWindow
 libwx_gtk3u_core-3.1.so.4:_ZN25wxNotificationMessageBaseD0Ev
 libwx_gtk3u_core-3.1.so.4:_ZN25wxNotificationMessageBaseD1Ev
 libwx_gtk3u_core-3.1.so.4:_ZN25wxNotificationMessageBaseD2Ev
+libwx_gtk3u_core-3.1.so.4:_ZN25wxVarVScrollLegacyAdaptor11RefreshLineEm
+libwx_gtk3u_core-3.1.so.4:_ZN25wxVarVScrollLegacyAdaptor11ScrollLinesEi
+libwx_gtk3u_core-3.1.so.4:_ZN25wxVarVScrollLegacyAdaptor11ScrollPagesEi
+libwx_gtk3u_core-3.1.so.4:_ZN25wxVarVScrollLegacyAdaptor12RefreshLinesEmm
+libwx_gtk3u_core-3.1.so.4:_ZN25wxVarVScrollLegacyAdaptor12ScrollToLineEm
+libwx_gtk3u_core-3.1.so.4:_ZN25wxVarVScrollLegacyAdaptor12SetLineCountEm
 libwx_gtk3u_core-3.1.so.4:_ZN26wxDataViewIconTextRenderer17GtkPackIntoColumnEP18_GtkTreeViewColumn
 libwx_gtk3u_core-3.1.so.4:_ZN26wxDataViewIconTextRenderer8SetValueERK9wxVariant
 libwx_gtk3u_core-3.1.so.4:_ZN26wxDataViewIconTextRendererC1ERK8wxString18wxDataViewCellModei
@@ -8498,6 +8547,7 @@ libwx_gtk3u_core-3.1.so.4:_ZN43wxObjectArrayTraitsForwxGridCellCoordsArray4FreeE
 libwx_gtk3u_core-3.1.so.4:_ZN43wxObjectArrayTraitsForwxGridCellCoordsArray5CloneERK16wxGridCellCoords
 libwx_gtk3u_core-3.1.so.4:_ZN45wxObjectArrayTraitsForwxGridCellWithAttrArray4FreeEP18wxGridCellWithAttr
 libwx_gtk3u_core-3.1.so.4:_ZN45wxObjectArrayTraitsForwxGridCellWithAttrArray5CloneERK18wxGridCellWithAttr
+libwx_gtk3u_core-3.1.so.4:_ZN4wxDC10DrawObjectEP12wxDrawObject
 libwx_gtk3u_core-3.1.so.4:_ZN4wxDC14CopyAttributesERKS_
 libwx_gtk3u_core-3.1.so.4:_ZN4wxDC9DrawLabelERK8wxStringRK8wxBitmapRK6wxRectiiPS6_
 libwx_gtk3u_core-3.1.so.4:_ZN5wxApp10InitializeERiPPw
@@ -8971,6 +9021,7 @@ libwx_gtk3u_core-3.1.so.4:_ZN7wxSizer16DoSetItemMinSizeEPS_ii
 libwx_gtk3u_core-3.1.so.4:_ZN7wxSizer16DoSetItemMinSizeEmii
 libwx_gtk3u_core-3.1.so.4:_ZN7wxSizer16GetMinClientSizeEP8wxWindow
 libwx_gtk3u_core-3.1.so.4:_ZN7wxSizer19SetContainingWindowEP8wxWindow
+libwx_gtk3u_core-3.1.so.4:_ZN7wxSizer19SetVirtualSizeHintsEP8wxWindow
 libwx_gtk3u_core-3.1.so.4:_ZN7wxSizer24ComputeFittingClientSizeEP8wxWindow
 libwx_gtk3u_core-3.1.so.4:_ZN7wxSizer24ComputeFittingWindowSizeEP8wxWindow
 libwx_gtk3u_core-3.1.so.4:_ZN7wxSizer3FitEP8wxWindow
@@ -9476,6 +9527,7 @@ libwx_gtk3u_core-3.1.so.4:_ZNK10wxComboBox17GetEventHashTableEv
 libwx_gtk3u_core-3.1.so.4:_ZNK10wxComboBox21DoGetSizeFromTextSizeEii
 libwx_gtk3u_core-3.1.so.4:_ZNK10wxDocument12GetClassInfoEv
 libwx_gtk3u_core-3.1.so.4:_ZNK10wxDocument12GetFirstViewEv
+libwx_gtk3u_core-3.1.so.4:_ZNK10wxDocument16GetPrintableNameER8wxString
 libwx_gtk3u_core-3.1.so.4:_ZNK10wxDocument17GetDocumentWindowEv
 libwx_gtk3u_core-3.1.so.4:_ZNK10wxDocument18GetDocumentManagerEv
 libwx_gtk3u_core-3.1.so.4:_ZNK10wxDocument19GetUserReadableNameEv
@@ -9966,6 +10018,7 @@ libwx_gtk3u_core-3.1.so.4:_ZNK13wxDirItemData10HasSubDirsEv
 libwx_gtk3u_core-3.1.so.4:_ZNK13wxDirItemData8HasFilesERK8wxString
 libwx_gtk3u_core-3.1.so.4:_ZNK13wxDocPrintout12GetClassInfoEv
 libwx_gtk3u_core-3.1.so.4:_ZNK13wxDocTemplate12GetClassInfoEv
+libwx_gtk3u_core-3.1.so.4:_ZNK13wxEffectsImpl12GetClassInfoEv
 libwx_gtk3u_core-3.1.so.4:_ZNK13wxFileHistory12GetClassInfoEv
 libwx_gtk3u_core-3.1.so.4:_ZNK13wxGBSizerItem12GetClassInfoEv
 libwx_gtk3u_core-3.1.so.4:_ZNK13wxGBSizerItem6GetPosERiS0_
@@ -9978,6 +10031,7 @@ libwx_gtk3u_core-3.1.so.4:_ZNK13wxGtkFileCtrl12GetFilenamesER13wxArrayString
 libwx_gtk3u_core-3.1.so.4:_ZNK13wxGtkFileCtrl7GetPathEv
 libwx_gtk3u_core-3.1.so.4:_ZNK13wxGtkFileCtrl8GetPathsER13wxArrayString
 libwx_gtk3u_core-3.1.so.4:_ZNK13wxJPEGHandler12GetClassInfoEv
+libwx_gtk3u_core-3.1.so.4:_ZNK13wxMenuBarBase11GetLabelTopEm
 libwx_gtk3u_core-3.1.so.4:_ZNK13wxMenuBarBase12FindMenuItemERK8wxStringS2_
 libwx_gtk3u_core-3.1.so.4:_ZNK13wxMenuBarBase13GetHelpStringEi
 libwx_gtk3u_core-3.1.so.4:_ZNK13wxMenuBarBase7GetMenuEm
@@ -10185,6 +10239,7 @@ libwx_gtk3u_core-3.1.so.4:_ZNK15wxComboCtrlBase12GetClassInfoEv
 libwx_gtk3u_core-3.1.so.4:_ZNK15wxComboCtrlBase12GetSelectionEPlS0_
 libwx_gtk3u_core-3.1.so.4:_ZNK15wxComboCtrlBase13DoGetBestSizeEv
 libwx_gtk3u_core-3.1.so.4:_ZNK15wxComboCtrlBase13GetEventTableEv
+libwx_gtk3u_core-3.1.so.4:_ZNK15wxComboCtrlBase13GetTextIndentEv
 libwx_gtk3u_core-3.1.so.4:_ZNK15wxComboCtrlBase15GetLastPositionEv
 libwx_gtk3u_core-3.1.so.4:_ZNK15wxComboCtrlBase17GetEventHashTableEv
 libwx_gtk3u_core-3.1.so.4:_ZNK15wxComboCtrlBase17GetInsertionPointEv
@@ -11021,6 +11076,13 @@ libwx_gtk3u_core-3.1.so.4:_ZNK24wxWindowModalDialogEvent12GetClassInfoEv
 libwx_gtk3u_core-3.1.so.4:_ZNK25wxGenericPrintSetupDialog12GetClassInfoEv
 libwx_gtk3u_core-3.1.so.4:_ZNK25wxGenericPrintSetupDialog13GetEventTableEv
 libwx_gtk3u_core-3.1.so.4:_ZNK25wxGenericPrintSetupDialog17GetEventHashTableEv
+libwx_gtk3u_core-3.1.so.4:_ZNK25wxVarVScrollLegacyAdaptor12GetLineCountEv
+libwx_gtk3u_core-3.1.so.4:_ZNK25wxVarVScrollLegacyAdaptor14OnGetLinesHintEmm
+libwx_gtk3u_core-3.1.so.4:_ZNK25wxVarVScrollLegacyAdaptor14OnGetRowHeightEm
+libwx_gtk3u_core-3.1.so.4:_ZNK25wxVarVScrollLegacyAdaptor15OnGetLineHeightEm
+libwx_gtk3u_core-3.1.so.4:_ZNK25wxVarVScrollLegacyAdaptor18GetLastVisibleLineEv
+libwx_gtk3u_core-3.1.so.4:_ZNK25wxVarVScrollLegacyAdaptor19GetFirstVisibleLineEv
+libwx_gtk3u_core-3.1.so.4:_ZNK25wxVarVScrollLegacyAdaptor19OnGetRowsHeightHintEmm
 libwx_gtk3u_core-3.1.so.4:_ZNK26wxDataViewIconTextRenderer12GetClassInfoEv
 libwx_gtk3u_core-3.1.so.4:_ZNK26wxDataViewIconTextRenderer21GtkGetValueFromStringERK8wxString
 libwx_gtk3u_core-3.1.so.4:_ZNK26wxDataViewIconTextRenderer8GetValueER9wxVariant
@@ -11057,6 +11119,10 @@ libwx_gtk3u_core-3.1.so.4:_ZNK31wxDataViewChoiceByIndexRenderer8GetValueER9wxVar
 libwx_gtk3u_core-3.1.so.4:_ZNK33wxGridColumnHeaderRendererDefault10DrawBorderERK6wxGridR4wxDCR6wxRect
 libwx_gtk3u_core-3.1.so.4:_ZNK33wxGridCornerHeaderRendererDefault10DrawBorderERK6wxGridR4wxDCR6wxRect
 libwx_gtk3u_core-3.1.so.4:_ZNK4wxDC12GetClassInfoEv
+libwx_gtk3u_core-3.1.so.4:_ZNK4wxDC13GetTextExtentERK8wxStringPlS3_S3_S3_PK6wxFont
+libwx_gtk3u_core-3.1.so.4:_ZNK4wxDC14GetClippingBoxEPlS0_S0_S0_
+libwx_gtk3u_core-3.1.so.4:_ZNK4wxDC15GetDeviceOriginEPlS0_
+libwx_gtk3u_core-3.1.so.4:_ZNK4wxDC16GetLogicalOriginEPlS0_
 libwx_gtk3u_core-3.1.so.4:_ZNK5wxApp12GetClassInfoEv
 libwx_gtk3u_core-3.1.so.4:_ZNK5wxPen10GetStippleEv
 libwx_gtk3u_core-3.1.so.4:_ZNK5wxPen12GetClassInfoEv
@@ -11112,6 +11178,7 @@ libwx_gtk3u_core-3.1.so.4:_ZNK6wxGrid12XToEdgeOfColEi
 libwx_gtk3u_core-3.1.so.4:_ZNK6wxGrid12YToEdgeOfRowEi
 libwx_gtk3u_core-3.1.so.4:_ZNK6wxGrid13DoGetBestSizeEv
 libwx_gtk3u_core-3.1.so.4:_ZNK6wxGrid13GetCellEditorEii
+libwx_gtk3u_core-3.1.so.4:_ZNK6wxGrid13GetDividerPenEv
 libwx_gtk3u_core-3.1.so.4:_ZNK6wxGrid13GetEventTableEv
 libwx_gtk3u_core-3.1.so.4:_ZNK6wxGrid13IsInSelectionEii
 libwx_gtk3u_core-3.1.so.4:_ZNK6wxGrid13StringToLinesERK8wxStringR13wxArrayString
@@ -11753,12 +11820,19 @@ libwx_gtk3u_core-3.1.so.4:_ZplRK6wxRectS1_
 libwx_gtk3u_gl-3.1.so.4:WXU_3.1
 libwx_gtk3u_gl-3.1.so.4:_ZN10wxGLCanvas17GTKHandleRealizedEv
 libwx_gtk3u_gl-3.1.so.4:_ZN10wxGLCanvas18SetBackgroundStyleE17wxBackgroundStyle
+libwx_gtk3u_gl-3.1.so.4:_ZN10wxGLCanvas22GTKInitImplicitContextEv
 libwx_gtk3u_gl-3.1.so.4:_ZN10wxGLCanvas6CreateEP8wxWindowRK14wxGLAttributesiRK7wxPointRK6wxSizelRK8wxStringRK9wxPalette
 libwx_gtk3u_gl-3.1.so.4:_ZN10wxGLCanvas6CreateEP8wxWindowiRK7wxPointRK6wxSizelRK8wxStringPKiRK9wxPalette
+libwx_gtk3u_gl-3.1.so.4:_ZN10wxGLCanvasC1EP8wxWindowPK11wxGLContextiRK7wxPointRK6wxSizelRK8wxStringPKiRK9wxPalette
+libwx_gtk3u_gl-3.1.so.4:_ZN10wxGLCanvasC1EP8wxWindowPKS_iRK7wxPointRK6wxSizelRK8wxStringPKiRK9wxPalette
 libwx_gtk3u_gl-3.1.so.4:_ZN10wxGLCanvasC1EP8wxWindowRK14wxGLAttributesiRK7wxPointRK6wxSizelRK8wxStringRK9wxPalette
 libwx_gtk3u_gl-3.1.so.4:_ZN10wxGLCanvasC1EP8wxWindowiPKiRK7wxPointRK6wxSizelRK8wxStringRK9wxPalette
+libwx_gtk3u_gl-3.1.so.4:_ZN10wxGLCanvasC1EP8wxWindowiRK7wxPointRK6wxSizelRK8wxStringPKiRK9wxPalette
+libwx_gtk3u_gl-3.1.so.4:_ZN10wxGLCanvasC2EP8wxWindowPK11wxGLContextiRK7wxPointRK6wxSizelRK8wxStringPKiRK9wxPalette
+libwx_gtk3u_gl-3.1.so.4:_ZN10wxGLCanvasC2EP8wxWindowPKS_iRK7wxPointRK6wxSizelRK8wxStringPKiRK9wxPalette
 libwx_gtk3u_gl-3.1.so.4:_ZN10wxGLCanvasC2EP8wxWindowRK14wxGLAttributesiRK7wxPointRK6wxSizelRK8wxStringRK9wxPalette
 libwx_gtk3u_gl-3.1.so.4:_ZN10wxGLCanvasC2EP8wxWindowiPKiRK7wxPointRK6wxSizelRK8wxStringRK9wxPalette
+libwx_gtk3u_gl-3.1.so.4:_ZN10wxGLCanvasC2EP8wxWindowiRK7wxPointRK6wxSizelRK8wxStringPKiRK9wxPalette
 libwx_gtk3u_gl-3.1.so.4:_ZN11wxGLContextC1EP10wxGLCanvasPKS_PK16wxGLContextAttrs
 libwx_gtk3u_gl-3.1.so.4:_ZN11wxGLContextC2EP10wxGLCanvasPKS_PK16wxGLContextAttrs
 libwx_gtk3u_gl-3.1.so.4:_ZN11wxGLContextD0Ev
@@ -11791,11 +11865,13 @@ libwx_gtk3u_gl-3.1.so.4:_ZN14wxGLAttributes7MinRGBAEiiii
 libwx_gtk3u_gl-3.1.so.4:_ZN14wxGLAttributes7StencilEi
 libwx_gtk3u_gl-3.1.so.4:_ZN14wxGLAttributes8DefaultsEv
 libwx_gtk3u_gl-3.1.so.4:_ZN14wxGLAttributes8SamplersEi
+libwx_gtk3u_gl-3.1.so.4:_ZN14wxGLCanvasBase10SetCurrentEv
 libwx_gtk3u_gl-3.1.so.4:_ZN14wxGLCanvasBase15ParseAttribListEPKiR14wxGLAttributesP16wxGLContextAttrs
 libwx_gtk3u_gl-3.1.so.4:_ZN14wxGLCanvasBase17IsExtensionInListEPKcS1_
 libwx_gtk3u_gl-3.1.so.4:_ZN14wxGLCanvasBase18IsDisplaySupportedEPKi
 libwx_gtk3u_gl-3.1.so.4:_ZN14wxGLCanvasBase18IsDisplaySupportedERK14wxGLAttributes
 libwx_gtk3u_gl-3.1.so.4:_ZN14wxGLCanvasBase20IsExtensionSupportedEPKc
+libwx_gtk3u_gl-3.1.so.4:_ZN14wxGLCanvasBase6OnSizeER11wxSizeEvent
 libwx_gtk3u_gl-3.1.so.4:_ZN14wxGLCanvasBase9SetColourERK8wxString
 libwx_gtk3u_gl-3.1.so.4:_ZN14wxGLCanvasBaseC1Ev
 libwx_gtk3u_gl-3.1.so.4:_ZN14wxGLCanvasBaseC2Ev
@@ -11838,6 +11914,7 @@ libwx_gtk3u_gl-3.1.so.4:_ZNK10wxGLCanvas12GetClassInfoEv
 libwx_gtk3u_gl-3.1.so.4:_ZNK11wxGLContext10SetCurrentERK10wxGLCanvas
 libwx_gtk3u_gl-3.1.so.4:_ZNK11wxGLContext12GetClassInfoEv
 libwx_gtk3u_gl-3.1.so.4:_ZNK13wxGLCanvasX1115IsShownOnScreenEv
+libwx_gtk3u_gl-3.1.so.4:_ZNK14wxGLCanvasBase10GetContextEv
 libwx_gtk3u_gl-3.1.so.4:_ZNK14wxGLCanvasBase10SetCurrentERK11wxGLContext
 libwx_gtk3u_gl-3.1.so.4:_ZNK7wxGLApp12GetClassInfoEv
 libwx_gtk3u_html-3.1.so.4:WXU_3.1
@@ -12550,6 +12627,7 @@ libwx_gtk3u_propgrid-3.1.so.4:_ZN12wxPGProperty6EnableEb
 libwx_gtk3u_propgrid-3.1.so.4:_ZN12wxPGProperty7OnEventEP14wxPropertyGridP8wxWindowR7wxEvent
 libwx_gtk3u_propgrid-3.1.so.4:_ZN12wxPGProperty7SetCellEiRK8wxPGCell
 libwx_gtk3u_propgrid-3.1.so.4:_ZN12wxPGProperty7SetNameERK8wxString
+libwx_gtk3u_propgrid-3.1.so.4:_ZN12wxPGProperty8AddChildEPS_
 libwx_gtk3u_propgrid-3.1.so.4:_ZN12wxPGProperty8DoEnableEb
 libwx_gtk3u_propgrid-3.1.so.4:_ZN12wxPGProperty8SetLabelERK8wxString
 libwx_gtk3u_propgrid-3.1.so.4:_ZN12wxPGProperty8SetValueE9wxVariantPS0_i
@@ -13241,6 +13319,7 @@ libwx_gtk3u_propgrid-3.1.so.4:_ZNK12wxPGProperty14DoGetAttributeERK8wxString
 libwx_gtk3u_propgrid-3.1.so.4:_ZNK12wxPGProperty14DoGetValidatorEv
 libwx_gtk3u_propgrid-3.1.so.4:_ZNK12wxPGProperty14GetEditorClassEv
 libwx_gtk3u_propgrid-3.1.so.4:_ZNK12wxPGProperty14GetImageOffsetEi
+libwx_gtk3u_propgrid-3.1.so.4:_ZNK12wxPGProperty14GetValueStringEi
 libwx_gtk3u_propgrid-3.1.so.4:_ZNK12wxPGProperty14IsTextEditableEv
 libwx_gtk3u_propgrid-3.1.so.4:_ZNK12wxPGProperty14OnMeasureImageEi
 libwx_gtk3u_propgrid-3.1.so.4:_ZNK12wxPGProperty15GetCellRendererEi

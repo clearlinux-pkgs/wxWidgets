@@ -5,7 +5,7 @@
 %define keepstatic 1
 Name     : wxWidgets
 Version  : 3.1.4
-Release  : 9
+Release  : 10
 URL      : https://github.com/wxWidgets/wxWidgets/releases/download/v3.1.4/wxWidgets-3.1.4.tar.bz2
 Source0  : https://github.com/wxWidgets/wxWidgets/releases/download/v3.1.4/wxWidgets-3.1.4.tar.bz2
 Summary  : zlib compression library
@@ -116,7 +116,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1595459195
+export SOURCE_DATE_EPOCH=1601583261
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$FFLAGS -fno-lto "
@@ -127,14 +127,16 @@ export CXXFLAGS="$CXXFLAGS -fno-lto "
 --enable-cxx11 \
 --enable-debug_gdb \
 --enable-utf8 \
---enable-notebook
+--enable-notebook \
+--enable-compat28
 make  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1595459195
+export SOURCE_DATE_EPOCH=1601583261
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/wxWidgets
 cp %{_builddir}/wxWidgets-3.1.4/3rdparty/catch/LICENSE.txt %{buildroot}/usr/share/package-licenses/wxWidgets/3cba29011be2b9d59f6204d6fa0a386b1b2dbd90
+cp %{_builddir}/wxWidgets-3.1.4/build/cmake/modules/cotire_test/license %{buildroot}/usr/share/package-licenses/wxWidgets/ece76272e705e27f0c76531aac6dd0b10820bc10
 cp %{_builddir}/wxWidgets-3.1.4/docs/gpl.txt %{buildroot}/usr/share/package-licenses/wxWidgets/4cc77b90af91e615a64ae04893fdffa7939db84c
 cp %{_builddir}/wxWidgets-3.1.4/docs/wine/COPYING.LIB %{buildroot}/usr/share/package-licenses/wxWidgets/ec2350cf4fe9c4f97c3ee5c9046d0396672c365a
 cp %{_builddir}/wxWidgets-3.1.4/src/expat/expat/COPYING %{buildroot}/usr/share/package-licenses/wxWidgets/1830cf88edd943aadba8ca7504d45113ca3431a2
@@ -955,6 +957,7 @@ cp %{_builddir}/wxWidgets-3.1.4/src/tiff/COPYRIGHT %{buildroot}/usr/share/packag
 /usr/share/package-licenses/wxWidgets/9da27f7b263edb706105ccd68880474013b11bca
 /usr/share/package-licenses/wxWidgets/a2f64f2a85f5fd34bda8eb713c3aad008adbb589
 /usr/share/package-licenses/wxWidgets/ec2350cf4fe9c4f97c3ee5c9046d0396672c365a
+/usr/share/package-licenses/wxWidgets/ece76272e705e27f0c76531aac6dd0b10820bc10
 /usr/share/package-licenses/wxWidgets/fc3951ba26fe1914759f605696a1d23e3b41766f
 
 %files locales -f wxstd.lang -f wxmsw.lang
