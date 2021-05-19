@@ -1,8 +1,10 @@
+libEGL.so.1
 libGL.so.1
 libX11.so.6
 libXtst.so.6
 libc.so.6
 libcairo.so.2
+libcurl.so.4
 libdl.so.2
 libexpat.so.1
 libfontconfig.so.1
@@ -27,5 +29,7 @@ libpng16.so.16
 libpthread.so.0
 libsecret-1.so.0
 libstdc++.so.6
+libwayland-client.so.0
+libwayland-egl.so.1
 libwebkit2gtk-4.0.so.37
 libz.so.1
