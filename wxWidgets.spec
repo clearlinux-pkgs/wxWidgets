@@ -5,7 +5,7 @@
 %define keepstatic 1
 Name     : wxWidgets
 Version  : 3.1.5
-Release  : 11
+Release  : 12
 URL      : https://github.com/wxWidgets/wxWidgets/releases/download/v3.1.5/wxWidgets-3.1.5.tar.bz2
 Source0  : https://github.com/wxWidgets/wxWidgets/releases/download/v3.1.5/wxWidgets-3.1.5.tar.bz2
 Summary  : zlib compression library
@@ -118,7 +118,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1621444825
+export SOURCE_DATE_EPOCH=1648873238
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$FFLAGS -fno-lto "
@@ -134,7 +134,7 @@ export CXXFLAGS="$CXXFLAGS -fno-lto "
 make  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1621444825
+export SOURCE_DATE_EPOCH=1648873238
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/wxWidgets
 cp %{_builddir}/wxWidgets-3.1.5/3rdparty/catch/LICENSE.txt %{buildroot}/usr/share/package-licenses/wxWidgets/3cba29011be2b9d59f6204d6fa0a386b1b2dbd90

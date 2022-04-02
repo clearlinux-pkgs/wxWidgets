@@ -1,7 +1,6 @@
 Configure miss: _vsnwprintf
 Configure miss: broken libstdc++ visibility
 Configure miss: cos
-Configure miss: dladdr
 Configure miss: floor
 Configure miss: g++ option to enable C++11 features
 Configure miss: if floating point functions link without -lm
