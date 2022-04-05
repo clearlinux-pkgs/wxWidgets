@@ -4,15 +4,16 @@
 #
 %define keepstatic 1
 Name     : wxWidgets
-Version  : 3.1.5
-Release  : 12
-URL      : https://github.com/wxWidgets/wxWidgets/releases/download/v3.1.5/wxWidgets-3.1.5.tar.bz2
-Source0  : https://github.com/wxWidgets/wxWidgets/releases/download/v3.1.5/wxWidgets-3.1.5.tar.bz2
+Version  : 3.1.6
+Release  : 13
+URL      : https://github.com/wxWidgets/wxWidgets/releases/download/v3.1.6/wxWidgets-3.1.6.tar.bz2
+Source0  : https://github.com/wxWidgets/wxWidgets/releases/download/v3.1.6/wxWidgets-3.1.6.tar.bz2
 Summary  : zlib compression library
 Group    : Development/Tools
-License  : BSL-1.0 GPL-2.0 HPND LGPL-2.0 Libpng MIT TCL libtiff
+License  : BSD-3-Clause BSL-1.0 GPL-2.0 HPND LGPL-2.0 Libpng MIT TCL Zlib libtiff
 Requires: wxWidgets-bin = %{version}-%{release}
 Requires: wxWidgets-data = %{version}-%{release}
+Requires: wxWidgets-filemap = %{version}-%{release}
 Requires: wxWidgets-lib = %{version}-%{release}
 Requires: wxWidgets-license = %{version}-%{release}
 Requires: wxWidgets-locales = %{version}-%{release}
@@ -20,7 +21,6 @@ BuildRequires : buildreq-cmake
 BuildRequires : buildreq-scons
 BuildRequires : cairo-dev
 BuildRequires : glu-dev
-BuildRequires : libjpeg-turbo-dev
 BuildRequires : pkgconfig(Qt5Core)
 BuildRequires : pkgconfig(Qt5Gui)
 BuildRequires : pkgconfig(Qt5OpenGL)
@@ -29,6 +29,7 @@ BuildRequires : pkgconfig(Qt5Widgets)
 BuildRequires : pkgconfig(cairo)
 BuildRequires : pkgconfig(egl)
 BuildRequires : pkgconfig(fontconfig)
+BuildRequires : pkgconfig(gspell-1)
 BuildRequires : pkgconfig(gstreamer-1.0)
 BuildRequires : pkgconfig(gstreamer-player-1.0)
 BuildRequires : pkgconfig(gstreamer-plugins-base-1.0)
@@ -42,10 +43,10 @@ BuildRequires : pkgconfig(pangoft2)
 BuildRequires : pkgconfig(pangoxft)
 BuildRequires : pkgconfig(sdl)
 BuildRequires : pkgconfig(sdl2)
+BuildRequires : pkgconfig(valgrind)
 BuildRequires : pkgconfig(webkit2gtk-4.0)
 BuildRequires : pkgconfig(xtst)
 BuildRequires : tiff-dev
-BuildRequires : xz-dev
 
 %description
 This directory contains Bakefile (see http://bakefile.sourceforge.net)
@@ -57,6 +58,7 @@ Summary: bin components for the wxWidgets package.
 Group: Binaries
 Requires: wxWidgets-data = %{version}-%{release}
 Requires: wxWidgets-license = %{version}-%{release}
+Requires: wxWidgets-filemap = %{version}-%{release}
 
 %description bin
 bin components for the wxWidgets package.
@@ -83,11 +85,20 @@ Requires: wxWidgets = %{version}-%{release}
 dev components for the wxWidgets package.
 
 
+%package filemap
+Summary: filemap components for the wxWidgets package.
+Group: Default
+
+%description filemap
+filemap components for the wxWidgets package.
+
+
 %package lib
 Summary: lib components for the wxWidgets package.
 Group: Libraries
 Requires: wxWidgets-data = %{version}-%{release}
 Requires: wxWidgets-license = %{version}-%{release}
+Requires: wxWidgets-filemap = %{version}-%{release}
 
 %description lib
 lib components for the wxWidgets package.
@@ -110,15 +121,18 @@ locales components for the wxWidgets package.
 
 
 %prep
-%setup -q -n wxWidgets-3.1.5
-cd %{_builddir}/wxWidgets-3.1.5
+%setup -q -n wxWidgets-3.1.6
+cd %{_builddir}/wxWidgets-3.1.6
+pushd ..
+cp -a wxWidgets-3.1.6 buildavx2
+popd
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1648873238
+export SOURCE_DATE_EPOCH=1649171001
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$FFLAGS -fno-lto "
@@ -133,23 +147,45 @@ export CXXFLAGS="$CXXFLAGS -fno-lto "
 --enable-compat28
 make  %{?_smp_mflags}
 
+pushd ../buildavx2/
+export CFLAGS="$CFLAGS -m64 -march=x86-64-v3 -Wl,-z,x86-64-v3 "
+export CXXFLAGS="$CXXFLAGS -m64 -march=x86-64-v3 -Wl,-z,x86-64-v3 "
+export FFLAGS="$FFLAGS -m64 -march=x86-64-v3 -Wl,-z,x86-64-v3 "
+export FCFLAGS="$FCFLAGS -m64 -march=x86-64-v3 "
+export LDFLAGS="$LDFLAGS -m64 -march=x86-64-v3 "
+%autogen  --with-gtk=3 \
+--without-libtiff \
+--enable-cxx11 \
+--enable-debug_gdb \
+--enable-utf8 \
+--enable-notebook \
+--enable-compat28
+make  %{?_smp_mflags}
+popd
 %install
-export SOURCE_DATE_EPOCH=1648873238
+export SOURCE_DATE_EPOCH=1649171001
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/wxWidgets
-cp %{_builddir}/wxWidgets-3.1.5/3rdparty/catch/LICENSE.txt %{buildroot}/usr/share/package-licenses/wxWidgets/3cba29011be2b9d59f6204d6fa0a386b1b2dbd90
-cp %{_builddir}/wxWidgets-3.1.5/build/cmake/modules/cotire_test/license %{buildroot}/usr/share/package-licenses/wxWidgets/ece76272e705e27f0c76531aac6dd0b10820bc10
-cp %{_builddir}/wxWidgets-3.1.5/docs/gpl.txt %{buildroot}/usr/share/package-licenses/wxWidgets/4cc77b90af91e615a64ae04893fdffa7939db84c
-cp %{_builddir}/wxWidgets-3.1.5/docs/wine/COPYING.LIB %{buildroot}/usr/share/package-licenses/wxWidgets/ec2350cf4fe9c4f97c3ee5c9046d0396672c365a
-cp %{_builddir}/wxWidgets-3.1.5/src/expat/expat/COPYING %{buildroot}/usr/share/package-licenses/wxWidgets/8623dd26727a708a49dbe6a52edb1d931d70816d
-cp %{_builddir}/wxWidgets-3.1.5/src/motif/mdi/COPYRIGHT %{buildroot}/usr/share/package-licenses/wxWidgets/3f65d8e23a75d7c0a9a7b7092c9249e4f8cd2db4
-cp %{_builddir}/wxWidgets-3.1.5/src/motif/xmcombo/copying.txt %{buildroot}/usr/share/package-licenses/wxWidgets/17e3b0eea99abffe6ac71e65627413236e0b117a
-cp %{_builddir}/wxWidgets-3.1.5/src/png/LICENSE %{buildroot}/usr/share/package-licenses/wxWidgets/fc3951ba26fe1914759f605696a1d23e3b41766f
-cp %{_builddir}/wxWidgets-3.1.5/src/regex/COPYRIGHT %{buildroot}/usr/share/package-licenses/wxWidgets/9a5a0d7c8ffa82a9489acbb7f0d6947a2b1bc27f
-cp %{_builddir}/wxWidgets-3.1.5/src/stc/scintilla/License.txt %{buildroot}/usr/share/package-licenses/wxWidgets/9da27f7b263edb706105ccd68880474013b11bca
-cp %{_builddir}/wxWidgets-3.1.5/src/tiff/COPYRIGHT %{buildroot}/usr/share/package-licenses/wxWidgets/a2f64f2a85f5fd34bda8eb713c3aad008adbb589
+cp %{_builddir}/wxWidgets-3.1.6/3rdparty/catch/LICENSE.txt %{buildroot}/usr/share/package-licenses/wxWidgets/3cba29011be2b9d59f6204d6fa0a386b1b2dbd90
+cp %{_builddir}/wxWidgets-3.1.6/3rdparty/nanosvg/LICENSE.txt %{buildroot}/usr/share/package-licenses/wxWidgets/f4f94babc436555d2f5992e29aacc47433fbadb4
+cp %{_builddir}/wxWidgets-3.1.6/3rdparty/pcre/LICENCE %{buildroot}/usr/share/package-licenses/wxWidgets/3005b2c68faac406829c8ea56376ddcb1ed0eabb
+cp %{_builddir}/wxWidgets-3.1.6/3rdparty/pcre/cmake/COPYING-CMAKE-SCRIPTS %{buildroot}/usr/share/package-licenses/wxWidgets/ff3ed70db4739b3c6747c7f624fe2bad70802987
+cp %{_builddir}/wxWidgets-3.1.6/build/cmake/modules/cotire_test/license %{buildroot}/usr/share/package-licenses/wxWidgets/ece76272e705e27f0c76531aac6dd0b10820bc10
+cp %{_builddir}/wxWidgets-3.1.6/docs/gpl.txt %{buildroot}/usr/share/package-licenses/wxWidgets/4cc77b90af91e615a64ae04893fdffa7939db84c
+cp %{_builddir}/wxWidgets-3.1.6/docs/wine/COPYING.LIB %{buildroot}/usr/share/package-licenses/wxWidgets/ec2350cf4fe9c4f97c3ee5c9046d0396672c365a
+cp %{_builddir}/wxWidgets-3.1.6/src/expat/expat/COPYING %{buildroot}/usr/share/package-licenses/wxWidgets/8623dd26727a708a49dbe6a52edb1d931d70816d
+cp %{_builddir}/wxWidgets-3.1.6/src/motif/mdi/COPYRIGHT %{buildroot}/usr/share/package-licenses/wxWidgets/3f65d8e23a75d7c0a9a7b7092c9249e4f8cd2db4
+cp %{_builddir}/wxWidgets-3.1.6/src/motif/xmcombo/copying.txt %{buildroot}/usr/share/package-licenses/wxWidgets/17e3b0eea99abffe6ac71e65627413236e0b117a
+cp %{_builddir}/wxWidgets-3.1.6/src/png/LICENSE %{buildroot}/usr/share/package-licenses/wxWidgets/fc3951ba26fe1914759f605696a1d23e3b41766f
+cp %{_builddir}/wxWidgets-3.1.6/src/regex/COPYRIGHT %{buildroot}/usr/share/package-licenses/wxWidgets/9a5a0d7c8ffa82a9489acbb7f0d6947a2b1bc27f
+cp %{_builddir}/wxWidgets-3.1.6/src/stc/scintilla/License.txt %{buildroot}/usr/share/package-licenses/wxWidgets/9da27f7b263edb706105ccd68880474013b11bca
+cp %{_builddir}/wxWidgets-3.1.6/src/tiff/COPYRIGHT %{buildroot}/usr/share/package-licenses/wxWidgets/a2f64f2a85f5fd34bda8eb713c3aad008adbb589
+pushd ../buildavx2/
+%make_install_v3
+popd
 %make_install
 %find_lang wxstd-3.1
+/usr/bin/elf-move.py avx2 %{buildroot}-v3 %{buildroot}/usr/share/clear/optimized-elf/ %{buildroot}/usr/share/clear/filemap/filemap-%{name}
 
 %files
 %defattr(-,root,root,-)
@@ -160,6 +196,7 @@ cp %{_builddir}/wxWidgets-3.1.5/src/tiff/COPYRIGHT %{buildroot}/usr/share/packag
 /usr/bin/wx-config
 /usr/bin/wxrc
 /usr/bin/wxrc-3.1
+/usr/share/clear/optimized-elf/bin*
 
 %files data
 %defattr(-,root,root,-)
@@ -205,6 +242,7 @@ cp %{_builddir}/wxWidgets-3.1.5/src/tiff/COPYRIGHT %{buildroot}/usr/share/packag
 /usr/include/wx-3.1/wx/base64.h
 /usr/include/wx-3.1/wx/beforestd.h
 /usr/include/wx-3.1/wx/bitmap.h
+/usr/include/wx-3.1/wx/bmpbndl.h
 /usr/include/wx-3.1/wx/bmpbuttn.h
 /usr/include/wx-3.1/wx/bmpcbox.h
 /usr/include/wx-3.1/wx/bookctrl.h
@@ -545,6 +583,7 @@ cp %{_builddir}/wxWidgets-3.1.5/src/tiff/COPYRIGHT %{buildroot}/usr/share/packag
 /usr/include/wx-3.1/wx/listbox.h
 /usr/include/wx-3.1/wx/listctrl.h
 /usr/include/wx-3.1/wx/listimpl.cpp
+/usr/include/wx-3.1/wx/localedefs.h
 /usr/include/wx-3.1/wx/log.h
 /usr/include/wx-3.1/wx/longlong.h
 /usr/include/wx-3.1/wx/lzmastream.h
@@ -751,6 +790,7 @@ cp %{_builddir}/wxWidgets-3.1.5/src/tiff/COPYRIGHT %{buildroot}/usr/share/packag
 /usr/include/wx-3.1/wx/typeinfo.h
 /usr/include/wx-3.1/wx/types.h
 /usr/include/wx-3.1/wx/uiaction.h
+/usr/include/wx-3.1/wx/uilocale.h
 /usr/include/wx-3.1/wx/unichar.h
 /usr/include/wx-3.1/wx/unix/app.h
 /usr/include/wx-3.1/wx/unix/apptbase.h
@@ -822,6 +862,7 @@ cp %{_builddir}/wxWidgets-3.1.5/src/tiff/COPYRIGHT %{buildroot}/usr/share/packag
 /usr/include/wx-3.1/wx/xrc/xh_bmp.h
 /usr/include/wx-3.1/wx/xrc/xh_bmpbt.h
 /usr/include/wx-3.1/wx/xrc/xh_bmpcbox.h
+/usr/include/wx-3.1/wx/xrc/xh_bookctrlbase.h
 /usr/include/wx-3.1/wx/xrc/xh_bttn.h
 /usr/include/wx-3.1/wx/xrc/xh_cald.h
 /usr/include/wx-3.1/wx/xrc/xh_chckb.h
@@ -875,6 +916,7 @@ cp %{_builddir}/wxWidgets-3.1.5/src/tiff/COPYRIGHT %{buildroot}/usr/share/packag
 /usr/include/wx-3.1/wx/xrc/xh_stbox.h
 /usr/include/wx-3.1/wx/xrc/xh_stlin.h
 /usr/include/wx-3.1/wx/xrc/xh_sttxt.h
+/usr/include/wx-3.1/wx/xrc/xh_styledtextctrl.h
 /usr/include/wx-3.1/wx/xrc/xh_text.h
 /usr/include/wx-3.1/wx/xrc/xh_tglbtn.h
 /usr/include/wx-3.1/wx/xrc/xh_timectrl.h
@@ -915,45 +957,51 @@ cp %{_builddir}/wxWidgets-3.1.5/src/tiff/COPYRIGHT %{buildroot}/usr/share/packag
 /usr/lib64/wx/include/gtk3-unicode-3.1/wx/setup.h
 /usr/share/aclocal/*.m4
 
+%files filemap
+%defattr(-,root,root,-)
+/usr/share/clear/filemap/filemap-wxWidgets
+
 %files lib
 %defattr(-,root,root,-)
-/usr/lib64/libwx_baseu-3.1.so.5
-/usr/lib64/libwx_baseu-3.1.so.5.0.0
-/usr/lib64/libwx_baseu_net-3.1.so.5
-/usr/lib64/libwx_baseu_net-3.1.so.5.0.0
-/usr/lib64/libwx_baseu_xml-3.1.so.5
-/usr/lib64/libwx_baseu_xml-3.1.so.5.0.0
-/usr/lib64/libwx_gtk3u_adv-3.1.so.5
-/usr/lib64/libwx_gtk3u_adv-3.1.so.5.0.0
-/usr/lib64/libwx_gtk3u_aui-3.1.so.5
-/usr/lib64/libwx_gtk3u_aui-3.1.so.5.0.0
-/usr/lib64/libwx_gtk3u_core-3.1.so.5
-/usr/lib64/libwx_gtk3u_core-3.1.so.5.0.0
-/usr/lib64/libwx_gtk3u_gl-3.1.so.5
-/usr/lib64/libwx_gtk3u_gl-3.1.so.5.0.0
-/usr/lib64/libwx_gtk3u_html-3.1.so.5
-/usr/lib64/libwx_gtk3u_html-3.1.so.5.0.0
-/usr/lib64/libwx_gtk3u_media-3.1.so.5
-/usr/lib64/libwx_gtk3u_media-3.1.so.5.0.0
-/usr/lib64/libwx_gtk3u_propgrid-3.1.so.5
-/usr/lib64/libwx_gtk3u_propgrid-3.1.so.5.0.0
-/usr/lib64/libwx_gtk3u_qa-3.1.so.5
-/usr/lib64/libwx_gtk3u_qa-3.1.so.5.0.0
-/usr/lib64/libwx_gtk3u_ribbon-3.1.so.5
-/usr/lib64/libwx_gtk3u_ribbon-3.1.so.5.0.0
-/usr/lib64/libwx_gtk3u_richtext-3.1.so.5
-/usr/lib64/libwx_gtk3u_richtext-3.1.so.5.0.0
-/usr/lib64/libwx_gtk3u_stc-3.1.so.5
-/usr/lib64/libwx_gtk3u_stc-3.1.so.5.0.0
-/usr/lib64/libwx_gtk3u_webview-3.1.so.5
-/usr/lib64/libwx_gtk3u_webview-3.1.so.5.0.0
-/usr/lib64/libwx_gtk3u_xrc-3.1.so.5
-/usr/lib64/libwx_gtk3u_xrc-3.1.so.5.0.0
-/usr/lib64/wx/3.1.5/web-extensions/webkit2_extu-3.1.5.so
+/usr/lib64/libwx_baseu-3.1.so.6
+/usr/lib64/libwx_baseu-3.1.so.6.0.0
+/usr/lib64/libwx_baseu_net-3.1.so.6
+/usr/lib64/libwx_baseu_net-3.1.so.6.0.0
+/usr/lib64/libwx_baseu_xml-3.1.so.6
+/usr/lib64/libwx_baseu_xml-3.1.so.6.0.0
+/usr/lib64/libwx_gtk3u_adv-3.1.so.6
+/usr/lib64/libwx_gtk3u_adv-3.1.so.6.0.0
+/usr/lib64/libwx_gtk3u_aui-3.1.so.6
+/usr/lib64/libwx_gtk3u_aui-3.1.so.6.0.0
+/usr/lib64/libwx_gtk3u_core-3.1.so.6
+/usr/lib64/libwx_gtk3u_core-3.1.so.6.0.0
+/usr/lib64/libwx_gtk3u_gl-3.1.so.6
+/usr/lib64/libwx_gtk3u_gl-3.1.so.6.0.0
+/usr/lib64/libwx_gtk3u_html-3.1.so.6
+/usr/lib64/libwx_gtk3u_html-3.1.so.6.0.0
+/usr/lib64/libwx_gtk3u_media-3.1.so.6
+/usr/lib64/libwx_gtk3u_media-3.1.so.6.0.0
+/usr/lib64/libwx_gtk3u_propgrid-3.1.so.6
+/usr/lib64/libwx_gtk3u_propgrid-3.1.so.6.0.0
+/usr/lib64/libwx_gtk3u_qa-3.1.so.6
+/usr/lib64/libwx_gtk3u_qa-3.1.so.6.0.0
+/usr/lib64/libwx_gtk3u_ribbon-3.1.so.6
+/usr/lib64/libwx_gtk3u_ribbon-3.1.so.6.0.0
+/usr/lib64/libwx_gtk3u_richtext-3.1.so.6
+/usr/lib64/libwx_gtk3u_richtext-3.1.so.6.0.0
+/usr/lib64/libwx_gtk3u_stc-3.1.so.6
+/usr/lib64/libwx_gtk3u_stc-3.1.so.6.0.0
+/usr/lib64/libwx_gtk3u_webview-3.1.so.6
+/usr/lib64/libwx_gtk3u_webview-3.1.so.6.0.0
+/usr/lib64/libwx_gtk3u_xrc-3.1.so.6
+/usr/lib64/libwx_gtk3u_xrc-3.1.so.6.0.0
+/usr/lib64/wx/3.1.6/web-extensions/webkit2_extu-3.1.6.so
+/usr/share/clear/optimized-elf/lib*
 
 %files license
 %defattr(0644,root,root,0755)
 /usr/share/package-licenses/wxWidgets/17e3b0eea99abffe6ac71e65627413236e0b117a
+/usr/share/package-licenses/wxWidgets/3005b2c68faac406829c8ea56376ddcb1ed0eabb
 /usr/share/package-licenses/wxWidgets/3cba29011be2b9d59f6204d6fa0a386b1b2dbd90
 /usr/share/package-licenses/wxWidgets/3f65d8e23a75d7c0a9a7b7092c9249e4f8cd2db4
 /usr/share/package-licenses/wxWidgets/4cc77b90af91e615a64ae04893fdffa7939db84c
@@ -963,7 +1011,9 @@ cp %{_builddir}/wxWidgets-3.1.5/src/tiff/COPYRIGHT %{buildroot}/usr/share/packag
 /usr/share/package-licenses/wxWidgets/a2f64f2a85f5fd34bda8eb713c3aad008adbb589
 /usr/share/package-licenses/wxWidgets/ec2350cf4fe9c4f97c3ee5c9046d0396672c365a
 /usr/share/package-licenses/wxWidgets/ece76272e705e27f0c76531aac6dd0b10820bc10
+/usr/share/package-licenses/wxWidgets/f4f94babc436555d2f5992e29aacc47433fbadb4
 /usr/share/package-licenses/wxWidgets/fc3951ba26fe1914759f605696a1d23e3b41766f
+/usr/share/package-licenses/wxWidgets/ff3ed70db4739b3c6747c7f624fe2bad70802987
 
 %files locales -f wxstd-3.1.lang
 %defattr(-,root,root,-)

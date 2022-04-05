@@ -10,3 +10,4 @@ gstreamer-plugins-base-$GST_VERSION
 gstreamer-video-$GST_VERSION
 hildon-1
 hildon-lgpl
+libpcre2-$pcre_suffix
