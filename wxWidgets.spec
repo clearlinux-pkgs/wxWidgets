@@ -5,7 +5,7 @@
 %define keepstatic 1
 Name     : wxWidgets
 Version  : 3.1.7
-Release  : 15
+Release  : 16
 URL      : https://github.com/wxWidgets/wxWidgets/releases/download/v3.1.7/wxWidgets-3.1.7.tar.bz2
 Source0  : https://github.com/wxWidgets/wxWidgets/releases/download/v3.1.7/wxWidgets-3.1.7.tar.bz2
 Summary  : zlib compression library
@@ -132,7 +132,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1656344072
+export SOURCE_DATE_EPOCH=1656701341
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$FFLAGS -fno-lto "
@@ -163,7 +163,7 @@ export LDFLAGS="$LDFLAGS -m64 -march=x86-64-v3 "
 make  %{?_smp_mflags}
 popd
 %install
-export SOURCE_DATE_EPOCH=1656344072
+export SOURCE_DATE_EPOCH=1656701341
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/wxWidgets
 cp %{_builddir}/wxWidgets-3.1.7/3rdparty/catch/LICENSE.txt %{buildroot}/usr/share/package-licenses/wxWidgets/3cba29011be2b9d59f6204d6fa0a386b1b2dbd90
@@ -1044,6 +1044,7 @@ popd
 /usr/lib64/libwx_gtk3u_xrc-3.1.so.7
 /usr/lib64/libwx_gtk3u_xrc-3.1.so.7.0.0
 /usr/lib64/wx/3.1.7/web-extensions/webkit2_extu-3.1.7.so
+/usr/share/clear/optimized-elf/other*
 
 %files license
 %defattr(0644,root,root,0755)
