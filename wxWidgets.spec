@@ -5,7 +5,7 @@
 %define keepstatic 1
 Name     : wxWidgets
 Version  : 3.2.0
-Release  : 20
+Release  : 21
 URL      : https://github.com/wxWidgets/wxWidgets/releases/download/v3.2.0/wxWidgets-3.2.0.tar.bz2
 Source0  : https://github.com/wxWidgets/wxWidgets/releases/download/v3.2.0/wxWidgets-3.2.0.tar.bz2
 Summary  : zlib compression library
