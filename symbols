@@ -1,6 +1,7 @@
 libwx_baseu-3.2.so.0:ConvertFromIeeeExtended
 libwx_baseu-3.2.so.0:ConvertToIeeeExtended
 libwx_baseu-3.2.so.0:WXU_3.2
+libwx_baseu-3.2.so.0:WXU_3.2.1
 libwx_baseu-3.2.so.0:_Z10wxCopyFileRK8wxStringS1_b
 libwx_baseu-3.2.so.0:_Z10wxDecToHexh
 libwx_baseu-3.2.so.0:_Z10wxDecToHexhPcS_
@@ -2800,6 +2801,7 @@ libwx_baseu-3.2.so.0:pcre2_set_substitute_callout_8
 libwx_baseu-3.2.so.0:wxConvertFromIeeeExtended
 libwx_baseu-3.2.so.0:wxConvertToIeeeExtended
 libwx_baseu_net-3.2.so.0:WXU_3.2
+libwx_baseu_net-3.2.so.0:WXU_3.2.1
 libwx_baseu_net-3.2.so.0:_ZN10wxProtocol10LogRequestERK8wxString
 libwx_baseu_net-3.2.so.0:_ZN10wxProtocol11LogResponseERK8wxString
 libwx_baseu_net-3.2.so.0:_ZN10wxProtocol17SetDefaultTimeoutEj
@@ -3150,6 +3152,7 @@ libwx_baseu_net-3.2.so.0:_ZNK6wxHTTP9GetHeaderERK8wxString
 libwx_baseu_net-3.2.so.0:_ZThn64_N14wxSocketStreamD0Ev
 libwx_baseu_net-3.2.so.0:_ZThn64_N14wxSocketStreamD1Ev
 libwx_baseu_xml-3.2.so.0:WXU_3.2
+libwx_baseu_xml-3.2.so.0:WXU_3.2.1
 libwx_baseu_xml-3.2.so.0:_ZN12wxXmlDoctype5ClearEv
 libwx_baseu_xml-3.2.so.0:_ZN13wxXmlDocument10DetachRootEv
 libwx_baseu_xml-3.2.so.0:_ZN13wxXmlDocument11SetFileTypeE14wxTextFileType
@@ -3203,8 +3206,10 @@ libwx_baseu_xml-3.2.so.0:_ZNK9wxXmlNode14GetNodeContentEv
 libwx_baseu_xml-3.2.so.0:_ZNK9wxXmlNode16IsWhitespaceOnlyEv
 libwx_baseu_xml-3.2.so.0:_ZNK9wxXmlNode8GetDepthEPS_
 libwx_gtk3u_adv-3.2.so.0:WXU_3.2
+libwx_gtk3u_adv-3.2.so.0:WXU_3.2.1
 libwx_gtk3u_adv-3.2.so.0:_Z29wxAdvLibraryIsObsoleteDontUsev
 libwx_gtk3u_aui-3.2.so.0:WXU_3.2
+libwx_gtk3u_aui-3.2.so.0:WXU_3.2.1
 libwx_gtk3u_aui-3.2.so.0:_ZN12wxAuiManager10DetachPaneEP8wxWindow
 libwx_gtk3u_aui-3.2.so.0:_ZN12wxAuiManager10GetManagerEP8wxWindow
 libwx_gtk3u_aui-3.2.so.0:_ZN12wxAuiManager10InsertPaneEP8wxWindowRK13wxAuiPaneInfoi
@@ -3758,6 +3763,7 @@ libwx_gtk3u_aui-3.2.so.0:_ZThn784_N12wxAuiTabCtrlD1Ev
 libwx_gtk3u_aui-3.2.so.0:_ZThn784_N13wxAuiNotebookD0Ev
 libwx_gtk3u_aui-3.2.so.0:_ZThn784_N13wxAuiNotebookD1Ev
 libwx_gtk3u_core-3.2.so.0:WXU_3.2
+libwx_gtk3u_core-3.2.so.0:WXU_3.2.1
 libwx_gtk3u_core-3.2.so.0:_Z10wxAboutBoxRK17wxAboutDialogInfoP8wxWindow
 libwx_gtk3u_core-3.2.so.0:_Z10wxToStringRK10wxFontBase
 libwx_gtk3u_core-3.2.so.0:_Z10wxToStringRK12wxColourBase
@@ -4918,6 +4924,7 @@ libwx_gtk3u_core-3.2.so.0:_ZN12wxFileButtonD1Ev
 libwx_gtk3u_core-3.2.so.0:_ZN12wxFileButtonD2Ev
 libwx_gtk3u_core-3.2.so.0:_ZN12wxFileDialog10SetMessageERK8wxString
 libwx_gtk3u_core-3.2.so.0:_ZN12wxFileDialog11AddChildGTKEP8wxWindow
+libwx_gtk3u_core-3.2.so.0:_ZN12wxFileDialog11AddShortcutERK8wxStringi
 libwx_gtk3u_core-3.2.so.0:_ZN12wxFileDialog11SetFilenameERK8wxString
 libwx_gtk3u_core-3.2.so.0:_ZN12wxFileDialog11SetWildcardERK8wxString
 libwx_gtk3u_core-3.2.so.0:_ZN12wxFileDialog12SetDirectoryERK8wxString
@@ -8919,6 +8926,7 @@ libwx_gtk3u_core-3.2.so.0:_ZN5wxApp14wxCreateObjectEv
 libwx_gtk3u_core-3.2.so.0:_ZN5wxApp15OnAssertFailureEPKwiS1_S1_S1_
 libwx_gtk3u_core-3.2.so.0:_ZN5wxApp20GTKIsUsingGlobalMenuEv
 libwx_gtk3u_core-3.2.so.0:_ZN5wxApp22GTKSuppressDiagnosticsEi
+libwx_gtk3u_core-3.2.so.0:_ZN5wxApp26GTKAllowDiagnosticsControlEv
 libwx_gtk3u_core-3.2.so.0:_ZN5wxApp6DoIdleEv
 libwx_gtk3u_core-3.2.so.0:_ZN5wxApp7CleanUpEv
 libwx_gtk3u_core-3.2.so.0:_ZN5wxApp9OnInitGuiEv
@@ -12294,6 +12302,7 @@ libwx_gtk3u_core-3.2.so.0:_ZlsR9wxVariantRK8wxColour
 libwx_gtk3u_core-3.2.so.0:_ZmlRK6wxRectS1_
 libwx_gtk3u_core-3.2.so.0:_ZplRK6wxRectS1_
 libwx_gtk3u_gl-3.2.so.0:WXU_3.2
+libwx_gtk3u_gl-3.2.so.0:WXU_3.2.1
 libwx_gtk3u_gl-3.2.so.0:_ZN10wxGLCanvas17GTKHandleRealizedEv
 libwx_gtk3u_gl-3.2.so.0:_ZN10wxGLCanvas18SetBackgroundStyleE17wxBackgroundStyle
 libwx_gtk3u_gl-3.2.so.0:_ZN10wxGLCanvas22GTKInitImplicitContextEv
@@ -12393,6 +12402,7 @@ libwx_gtk3u_gl-3.2.so.0:_ZNK14wxGLCanvasBase10GetContextEv
 libwx_gtk3u_gl-3.2.so.0:_ZNK14wxGLCanvasBase10SetCurrentERK11wxGLContext
 libwx_gtk3u_gl-3.2.so.0:_ZNK7wxGLApp12GetClassInfoEv
 libwx_gtk3u_html-3.2.so.0:WXU_3.2
+libwx_gtk3u_html-3.2.so.0:WXU_3.2.1
 libwx_gtk3u_html-3.2.so.0:_ZN10wxHtmlCell13SetScriptModeE16wxHtmlScriptModel
 libwx_gtk3u_html-3.2.so.0:_ZN10wxHtmlCell17ProcessMouseClickEP21wxHtmlWindowInterfaceRK7wxPointRK12wxMouseEvent
 libwx_gtk3u_html-3.2.so.0:_ZN10wxHtmlCell6LayoutEi
@@ -12953,6 +12963,7 @@ libwx_gtk3u_html-3.2.so.0:_ZThn872_N13wxHtmlListBoxD1Ev
 libwx_gtk3u_html-3.2.so.0:_ZThn872_N19wxSimpleHtmlListBoxD0Ev
 libwx_gtk3u_html-3.2.so.0:_ZThn872_N19wxSimpleHtmlListBoxD1Ev
 libwx_gtk3u_media-3.2.so.0:WXU_3.2
+libwx_gtk3u_media-3.2.so.0:WXU_3.2.1
 libwx_gtk3u_media-3.2.so.0:_ZN11wxMediaCtrl11NextBackendEPN11wxClassInfo14const_iteratorE
 libwx_gtk3u_media-3.2.so.0:_ZN11wxMediaCtrl12DoMoveWindowEiiii
 libwx_gtk3u_media-3.2.so.0:_ZN11wxMediaCtrl15GetPlaybackRateEv
@@ -13023,6 +13034,7 @@ libwx_gtk3u_media-3.2.so.0:_ZNK14wxMediaBackend12GetClassInfoEv
 libwx_gtk3u_media-3.2.so.0:_ZNK23wxGStreamerMediaBackend12GetClassInfoEv
 libwx_gtk3u_media-3.2.so.0:_ZNK23wxGStreamerMediaBackend12GetVideoSizeEv
 libwx_gtk3u_propgrid-3.2.so.0:WXU_3.2
+libwx_gtk3u_propgrid-3.2.so.0:WXU_3.2.1
 libwx_gtk3u_propgrid-3.2.so.0:_Z13wxPGGetFailedPK12wxPGPropertyRK8wxString
 libwx_gtk3u_propgrid-3.2.so.0:_Z20wxSizeRefFromVariantR9wxVariant
 libwx_gtk3u_propgrid-3.2.so.0:_Z20wxSizeRefFromVariantRK9wxVariant
@@ -14130,6 +14142,7 @@ libwx_gtk3u_propgrid-3.2.so.0:_ZlsR9wxVariantRK6wxFont
 libwx_gtk3u_propgrid-3.2.so.0:_ZlsR9wxVariantRK6wxSize
 libwx_gtk3u_propgrid-3.2.so.0:_ZlsR9wxVariantRK7wxPoint
 libwx_gtk3u_qa-3.2.so.0:WXU_3.2
+libwx_gtk3u_qa-3.2.so.0:WXU_3.2.1
 libwx_gtk3u_qa-3.2.so.0:_ZN13wxDebugReport10AddContextENS_7ContextE
 libwx_gtk3u_qa-3.2.so.0:_ZN13wxDebugReport10RemoveFileERK8wxString
 libwx_gtk3u_qa-3.2.so.0:_ZN13wxDebugReport15DoAddSystemInfoEP9wxXmlNode
@@ -14157,6 +14170,7 @@ libwx_gtk3u_qa-3.2.so.0:_ZNK13wxDebugReport7GetFileEmP8wxStringS1_
 libwx_gtk3u_qa-3.2.so.0:_ZNK21wxDebugReportCompress15GetSaveLocationEv
 libwx_gtk3u_qa-3.2.so.0:_ZNK23wxDebugReportPreviewStd4ShowER13wxDebugReport
 libwx_gtk3u_ribbon-3.2.so.0:WXU_3.2
+libwx_gtk3u_ribbon-3.2.so.0:WXU_3.2.1
 libwx_gtk3u_ribbon-3.2.so.0:_Z18wxRibbonLoadPixmapPKPKc8wxColour
 libwx_gtk3u_ribbon-3.2.so.0:_Z22wxRibbonShiftLuminance17wxRibbonHSLColourf
 libwx_gtk3u_ribbon-3.2.so.0:_Z25wxRibbonInterpolateColourRK8wxColourS1_iii
@@ -14637,6 +14651,7 @@ libwx_gtk3u_ribbon-3.2.so.0:_ZNK22wxRibbonMSWArtProvider8GetFlagsEv
 libwx_gtk3u_ribbon-3.2.so.0:_ZNK22wxRibbonMSWArtProvider9GetColourEi
 libwx_gtk3u_ribbon-3.2.so.0:_ZNK22wxRibbonMSWArtProvider9GetMetricEi
 libwx_gtk3u_richtext-3.2.so.0:WXU_3.2
+libwx_gtk3u_richtext-3.2.so.0:WXU_3.2.1
 libwx_gtk3u_richtext-3.2.so.0:_Z12wxTextAttrEqRK14wxRichTextAttrS1_
 libwx_gtk3u_richtext-3.2.so.0:_Z16wxRichTextTabsEqRK10wxArrayIntS1_
 libwx_gtk3u_richtext-3.2.so.0:_Z20wxRichTextApplyStyleR14wxRichTextAttrRKS_PS_
@@ -16276,6 +16291,7 @@ libwx_gtk3u_richtext-3.2.so.0:_ZThn872_N21wxRichTextFontListBoxD1Ev
 libwx_gtk3u_richtext-3.2.so.0:_ZThn872_N22wxRichTextStyleListBoxD0Ev
 libwx_gtk3u_richtext-3.2.so.0:_ZThn872_N22wxRichTextStyleListBoxD1Ev
 libwx_gtk3u_stc-3.2.so.0:WXU_3.2
+libwx_gtk3u_stc-3.2.so.0:WXU_3.2.1
 libwx_gtk3u_stc-3.2.so.0:_ZN16wxStyledTextCtrl10AddTabStopEii
 libwx_gtk3u_stc-3.2.so.0:_ZN16wxStyledTextCtrl10AddTextRawEPKci
 libwx_gtk3u_stc-3.2.so.0:_ZN16wxStyledTextCtrl10AppendTextERK8wxString
@@ -17067,6 +17083,7 @@ libwx_gtk3u_stc-3.2.so.0:_ZThn784_N16wxStyledTextCtrl15EmptyUndoBufferEv
 libwx_gtk3u_stc-3.2.so.0:_ZThn784_N16wxStyledTextCtrlD0Ev
 libwx_gtk3u_stc-3.2.so.0:_ZThn784_N16wxStyledTextCtrlD1Ev
 libwx_gtk3u_webview-3.2.so.0:WXU_3.2
+libwx_gtk3u_webview-3.2.so.0:WXU_3.2.1
 libwx_gtk3u_webview-3.2.so.0:_ZN14wxWebViewEvent14wxCreateObjectEv
 libwx_gtk3u_webview-3.2.so.0:_ZN15wxWebViewWebKit11SetEditableEb
 libwx_gtk3u_webview-3.2.so.0:_ZN15wxWebViewWebKit11SetZoomTypeE17wxWebViewZoomType
@@ -17187,6 +17204,7 @@ libwx_gtk3u_webview-3.2.so.0:_ZNK9wxWebView7GetZoomEv
 libwx_gtk3u_webview-3.2.so.0:_ZNK9wxWebView8CanPasteEv
 libwx_gtk3u_webview-3.2.so.0:_ZNK9wxWebView9RunScriptERK8wxStringPS0_
 libwx_gtk3u_xrc-3.2.so.0:WXU_3.2
+libwx_gtk3u_xrc-3.2.so.0:WXU_3.2.1
 libwx_gtk3u_xrc-3.2.so.0:_Z23wxXmlInitResourceModulev
 libwx_gtk3u_xrc-3.2.so.0:_ZN13wxXmlResource10AddHandlerEP20wxXmlResourceHandler
 libwx_gtk3u_xrc-3.2.so.0:_ZN13wxXmlResource10DoGetXRCIDEPKci
