@@ -22,8 +22,6 @@ Configure miss: jbg_dec_init in -ljbig
 Configure miss: jbg_dec_init in -ljbig
 Configure miss: putws
 Configure miss: putws
-Configure miss: whether Intel CET is enabled
-Configure miss: whether Intel CET is enabled
 Configure miss: whether we are using the Intel C compiler
 Configure miss: whether we are using the Intel C compiler
 Configure miss: whether we are using the Intel C++ compiler
