@@ -4,10 +4,10 @@
 #
 %define keepstatic 1
 Name     : wxWidgets
-Version  : 3.2.2
-Release  : 26
-URL      : https://github.com/wxWidgets/wxWidgets/releases/download/v3.2.2/wxWidgets-3.2.2.tar.bz2
-Source0  : https://github.com/wxWidgets/wxWidgets/releases/download/v3.2.2/wxWidgets-3.2.2.tar.bz2
+Version  : 3.2.2.1
+Release  : 27
+URL      : https://github.com/wxWidgets/wxWidgets/releases/download/v3.2.2.1/wxWidgets-3.2.2.1.tar.bz2
+Source0  : https://github.com/wxWidgets/wxWidgets/releases/download/v3.2.2.1/wxWidgets-3.2.2.1.tar.bz2
 Summary  : Posix compatible interface to libpcre2-8
 Group    : Development/Tools
 License  : BSD-3-Clause BSL-1.0 GPL-2.0 HPND LGPL-2.0 Libpng MIT TCL Zlib libtiff
@@ -128,10 +128,10 @@ locales components for the wxWidgets package.
 
 
 %prep
-%setup -q -n wxWidgets-3.2.2
-cd %{_builddir}/wxWidgets-3.2.2
+%setup -q -n wxWidgets-3.2.2.1
+cd %{_builddir}/wxWidgets-3.2.2.1
 pushd ..
-cp -a wxWidgets-3.2.2 buildavx2
+cp -a wxWidgets-3.2.2.1 buildavx2
 popd
 
 %build
@@ -139,7 +139,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1676054492
+export SOURCE_DATE_EPOCH=1676311320
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz "
 export FCFLAGS="$FFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz "
@@ -170,7 +170,7 @@ export LDFLAGS="$LDFLAGS -m64 -march=x86-64-v3 "
 make  %{?_smp_mflags}
 popd
 %install
-export SOURCE_DATE_EPOCH=1676054492
+export SOURCE_DATE_EPOCH=1676311320
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/wxWidgets
 cp %{_builddir}/wxWidgets-%{version}/3rdparty/catch/LICENSE.txt %{buildroot}/usr/share/package-licenses/wxWidgets/3cba29011be2b9d59f6204d6fa0a386b1b2dbd90 || :
@@ -988,69 +988,69 @@ popd
 %files lib
 %defattr(-,root,root,-)
 /usr/lib64/glibc-hwcaps/x86-64-v3/libwx_baseu-3.2.so.0
-/usr/lib64/glibc-hwcaps/x86-64-v3/libwx_baseu-3.2.so.0.2.0
+/usr/lib64/glibc-hwcaps/x86-64-v3/libwx_baseu-3.2.so.0.2.1
 /usr/lib64/glibc-hwcaps/x86-64-v3/libwx_baseu_net-3.2.so.0
-/usr/lib64/glibc-hwcaps/x86-64-v3/libwx_baseu_net-3.2.so.0.2.0
+/usr/lib64/glibc-hwcaps/x86-64-v3/libwx_baseu_net-3.2.so.0.2.1
 /usr/lib64/glibc-hwcaps/x86-64-v3/libwx_baseu_xml-3.2.so.0
-/usr/lib64/glibc-hwcaps/x86-64-v3/libwx_baseu_xml-3.2.so.0.2.0
+/usr/lib64/glibc-hwcaps/x86-64-v3/libwx_baseu_xml-3.2.so.0.2.1
 /usr/lib64/glibc-hwcaps/x86-64-v3/libwx_gtk3u_adv-3.2.so.0
-/usr/lib64/glibc-hwcaps/x86-64-v3/libwx_gtk3u_adv-3.2.so.0.2.0
+/usr/lib64/glibc-hwcaps/x86-64-v3/libwx_gtk3u_adv-3.2.so.0.2.1
 /usr/lib64/glibc-hwcaps/x86-64-v3/libwx_gtk3u_aui-3.2.so.0
-/usr/lib64/glibc-hwcaps/x86-64-v3/libwx_gtk3u_aui-3.2.so.0.2.0
+/usr/lib64/glibc-hwcaps/x86-64-v3/libwx_gtk3u_aui-3.2.so.0.2.1
 /usr/lib64/glibc-hwcaps/x86-64-v3/libwx_gtk3u_core-3.2.so.0
-/usr/lib64/glibc-hwcaps/x86-64-v3/libwx_gtk3u_core-3.2.so.0.2.0
+/usr/lib64/glibc-hwcaps/x86-64-v3/libwx_gtk3u_core-3.2.so.0.2.1
 /usr/lib64/glibc-hwcaps/x86-64-v3/libwx_gtk3u_gl-3.2.so.0
-/usr/lib64/glibc-hwcaps/x86-64-v3/libwx_gtk3u_gl-3.2.so.0.2.0
+/usr/lib64/glibc-hwcaps/x86-64-v3/libwx_gtk3u_gl-3.2.so.0.2.1
 /usr/lib64/glibc-hwcaps/x86-64-v3/libwx_gtk3u_html-3.2.so.0
-/usr/lib64/glibc-hwcaps/x86-64-v3/libwx_gtk3u_html-3.2.so.0.2.0
+/usr/lib64/glibc-hwcaps/x86-64-v3/libwx_gtk3u_html-3.2.so.0.2.1
 /usr/lib64/glibc-hwcaps/x86-64-v3/libwx_gtk3u_media-3.2.so.0
-/usr/lib64/glibc-hwcaps/x86-64-v3/libwx_gtk3u_media-3.2.so.0.2.0
+/usr/lib64/glibc-hwcaps/x86-64-v3/libwx_gtk3u_media-3.2.so.0.2.1
 /usr/lib64/glibc-hwcaps/x86-64-v3/libwx_gtk3u_propgrid-3.2.so.0
-/usr/lib64/glibc-hwcaps/x86-64-v3/libwx_gtk3u_propgrid-3.2.so.0.2.0
+/usr/lib64/glibc-hwcaps/x86-64-v3/libwx_gtk3u_propgrid-3.2.so.0.2.1
 /usr/lib64/glibc-hwcaps/x86-64-v3/libwx_gtk3u_qa-3.2.so.0
-/usr/lib64/glibc-hwcaps/x86-64-v3/libwx_gtk3u_qa-3.2.so.0.2.0
+/usr/lib64/glibc-hwcaps/x86-64-v3/libwx_gtk3u_qa-3.2.so.0.2.1
 /usr/lib64/glibc-hwcaps/x86-64-v3/libwx_gtk3u_ribbon-3.2.so.0
-/usr/lib64/glibc-hwcaps/x86-64-v3/libwx_gtk3u_ribbon-3.2.so.0.2.0
+/usr/lib64/glibc-hwcaps/x86-64-v3/libwx_gtk3u_ribbon-3.2.so.0.2.1
 /usr/lib64/glibc-hwcaps/x86-64-v3/libwx_gtk3u_richtext-3.2.so.0
-/usr/lib64/glibc-hwcaps/x86-64-v3/libwx_gtk3u_richtext-3.2.so.0.2.0
+/usr/lib64/glibc-hwcaps/x86-64-v3/libwx_gtk3u_richtext-3.2.so.0.2.1
 /usr/lib64/glibc-hwcaps/x86-64-v3/libwx_gtk3u_stc-3.2.so.0
-/usr/lib64/glibc-hwcaps/x86-64-v3/libwx_gtk3u_stc-3.2.so.0.2.0
+/usr/lib64/glibc-hwcaps/x86-64-v3/libwx_gtk3u_stc-3.2.so.0.2.1
 /usr/lib64/glibc-hwcaps/x86-64-v3/libwx_gtk3u_webview-3.2.so.0
-/usr/lib64/glibc-hwcaps/x86-64-v3/libwx_gtk3u_webview-3.2.so.0.2.0
+/usr/lib64/glibc-hwcaps/x86-64-v3/libwx_gtk3u_webview-3.2.so.0.2.1
 /usr/lib64/glibc-hwcaps/x86-64-v3/libwx_gtk3u_xrc-3.2.so.0
-/usr/lib64/glibc-hwcaps/x86-64-v3/libwx_gtk3u_xrc-3.2.so.0.2.0
+/usr/lib64/glibc-hwcaps/x86-64-v3/libwx_gtk3u_xrc-3.2.so.0.2.1
 /usr/lib64/libwx_baseu-3.2.so.0
-/usr/lib64/libwx_baseu-3.2.so.0.2.0
+/usr/lib64/libwx_baseu-3.2.so.0.2.1
 /usr/lib64/libwx_baseu_net-3.2.so.0
-/usr/lib64/libwx_baseu_net-3.2.so.0.2.0
+/usr/lib64/libwx_baseu_net-3.2.so.0.2.1
 /usr/lib64/libwx_baseu_xml-3.2.so.0
-/usr/lib64/libwx_baseu_xml-3.2.so.0.2.0
+/usr/lib64/libwx_baseu_xml-3.2.so.0.2.1
 /usr/lib64/libwx_gtk3u_adv-3.2.so.0
-/usr/lib64/libwx_gtk3u_adv-3.2.so.0.2.0
+/usr/lib64/libwx_gtk3u_adv-3.2.so.0.2.1
 /usr/lib64/libwx_gtk3u_aui-3.2.so.0
-/usr/lib64/libwx_gtk3u_aui-3.2.so.0.2.0
+/usr/lib64/libwx_gtk3u_aui-3.2.so.0.2.1
 /usr/lib64/libwx_gtk3u_core-3.2.so.0
-/usr/lib64/libwx_gtk3u_core-3.2.so.0.2.0
+/usr/lib64/libwx_gtk3u_core-3.2.so.0.2.1
 /usr/lib64/libwx_gtk3u_gl-3.2.so.0
-/usr/lib64/libwx_gtk3u_gl-3.2.so.0.2.0
+/usr/lib64/libwx_gtk3u_gl-3.2.so.0.2.1
 /usr/lib64/libwx_gtk3u_html-3.2.so.0
-/usr/lib64/libwx_gtk3u_html-3.2.so.0.2.0
+/usr/lib64/libwx_gtk3u_html-3.2.so.0.2.1
 /usr/lib64/libwx_gtk3u_media-3.2.so.0
-/usr/lib64/libwx_gtk3u_media-3.2.so.0.2.0
+/usr/lib64/libwx_gtk3u_media-3.2.so.0.2.1
 /usr/lib64/libwx_gtk3u_propgrid-3.2.so.0
-/usr/lib64/libwx_gtk3u_propgrid-3.2.so.0.2.0
+/usr/lib64/libwx_gtk3u_propgrid-3.2.so.0.2.1
 /usr/lib64/libwx_gtk3u_qa-3.2.so.0
-/usr/lib64/libwx_gtk3u_qa-3.2.so.0.2.0
+/usr/lib64/libwx_gtk3u_qa-3.2.so.0.2.1
 /usr/lib64/libwx_gtk3u_ribbon-3.2.so.0
-/usr/lib64/libwx_gtk3u_ribbon-3.2.so.0.2.0
+/usr/lib64/libwx_gtk3u_ribbon-3.2.so.0.2.1
 /usr/lib64/libwx_gtk3u_richtext-3.2.so.0
-/usr/lib64/libwx_gtk3u_richtext-3.2.so.0.2.0
+/usr/lib64/libwx_gtk3u_richtext-3.2.so.0.2.1
 /usr/lib64/libwx_gtk3u_stc-3.2.so.0
-/usr/lib64/libwx_gtk3u_stc-3.2.so.0.2.0
+/usr/lib64/libwx_gtk3u_stc-3.2.so.0.2.1
 /usr/lib64/libwx_gtk3u_webview-3.2.so.0
-/usr/lib64/libwx_gtk3u_webview-3.2.so.0.2.0
+/usr/lib64/libwx_gtk3u_webview-3.2.so.0.2.1
 /usr/lib64/libwx_gtk3u_xrc-3.2.so.0
-/usr/lib64/libwx_gtk3u_xrc-3.2.so.0.2.0
+/usr/lib64/libwx_gtk3u_xrc-3.2.so.0.2.1
 /usr/lib64/wx/3.2/web-extensions/webkit2_extu-3.2.so
 /usr/share/clear/optimized-elf/other*
 
