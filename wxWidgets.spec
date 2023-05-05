@@ -6,7 +6,7 @@
 %define keepstatic 1
 Name     : wxWidgets
 Version  : 3.2.2.1
-Release  : 28
+Release  : 29
 URL      : https://github.com/wxWidgets/wxWidgets/releases/download/v3.2.2.1/wxWidgets-3.2.2.1.tar.bz2
 Source0  : https://github.com/wxWidgets/wxWidgets/releases/download/v3.2.2.1/wxWidgets-3.2.2.1.tar.bz2
 Summary  : Posix compatible interface to libpcre2-8
@@ -42,7 +42,6 @@ BuildRequires : pkgconfig(pangoxft)
 BuildRequires : pkgconfig(sdl)
 BuildRequires : pkgconfig(sdl2)
 BuildRequires : pkgconfig(valgrind)
-BuildRequires : pkgconfig(webkit2gtk-4.0)
 BuildRequires : pkgconfig(xtst)
 BuildRequires : tiff-dev
 # Suppress stripping binaries
@@ -127,7 +126,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1683244359
+export SOURCE_DATE_EPOCH=1683315737
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
 export FCFLAGS="$FFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
@@ -158,7 +157,7 @@ export LDFLAGS="$LDFLAGS -m64 -march=x86-64-v3 "
 make  %{?_smp_mflags}
 popd
 %install
-export SOURCE_DATE_EPOCH=1683244359
+export SOURCE_DATE_EPOCH=1683315737
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/wxWidgets
 cp %{_builddir}/wxWidgets-%{version}/3rdparty/catch/LICENSE.txt %{buildroot}/usr/share/package-licenses/wxWidgets/3cba29011be2b9d59f6204d6fa0a386b1b2dbd90 || :
@@ -218,7 +217,6 @@ popd
 /V3/usr/lib64/libwx_gtk3u_ribbon-3.2.so
 /V3/usr/lib64/libwx_gtk3u_richtext-3.2.so
 /V3/usr/lib64/libwx_gtk3u_stc-3.2.so
-/V3/usr/lib64/libwx_gtk3u_webview-3.2.so
 /V3/usr/lib64/libwx_gtk3u_xrc-3.2.so
 /usr/include/wx-3.2/wx/aboutdlg.h
 /usr/include/wx-3.2/wx/accel.h
@@ -965,7 +963,6 @@ popd
 /usr/lib64/libwx_gtk3u_ribbon-3.2.so
 /usr/lib64/libwx_gtk3u_richtext-3.2.so
 /usr/lib64/libwx_gtk3u_stc-3.2.so
-/usr/lib64/libwx_gtk3u_webview-3.2.so
 /usr/lib64/libwx_gtk3u_xrc-3.2.so
 /usr/lib64/wx/include/gtk3-unicode-3.2/wx/setup.h
 /usr/share/aclocal/*.m4
@@ -1000,11 +997,8 @@ popd
 /V3/usr/lib64/libwx_gtk3u_richtext-3.2.so.0.2.1
 /V3/usr/lib64/libwx_gtk3u_stc-3.2.so.0
 /V3/usr/lib64/libwx_gtk3u_stc-3.2.so.0.2.1
-/V3/usr/lib64/libwx_gtk3u_webview-3.2.so.0
-/V3/usr/lib64/libwx_gtk3u_webview-3.2.so.0.2.1
 /V3/usr/lib64/libwx_gtk3u_xrc-3.2.so.0
 /V3/usr/lib64/libwx_gtk3u_xrc-3.2.so.0.2.1
-/V3/usr/lib64/wx/3.2/web-extensions/webkit2_extu-3.2.so
 /usr/lib64/libwx_baseu-3.2.so.0
 /usr/lib64/libwx_baseu-3.2.so.0.2.1
 /usr/lib64/libwx_baseu_net-3.2.so.0
@@ -1033,11 +1027,8 @@ popd
 /usr/lib64/libwx_gtk3u_richtext-3.2.so.0.2.1
 /usr/lib64/libwx_gtk3u_stc-3.2.so.0
 /usr/lib64/libwx_gtk3u_stc-3.2.so.0.2.1
-/usr/lib64/libwx_gtk3u_webview-3.2.so.0
-/usr/lib64/libwx_gtk3u_webview-3.2.so.0.2.1
 /usr/lib64/libwx_gtk3u_xrc-3.2.so.0
 /usr/lib64/libwx_gtk3u_xrc-3.2.so.0.2.1
-/usr/lib64/wx/3.2/web-extensions/webkit2_extu-3.2.so
 
 %files license
 %defattr(0644,root,root,0755)

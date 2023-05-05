@@ -11,3 +11,4 @@ gstreamer-video-$GST_VERSION
 hildon-1
 hildon-lgpl
 libpcre2-$pcre_suffix
+webkit2gtk-4.0
