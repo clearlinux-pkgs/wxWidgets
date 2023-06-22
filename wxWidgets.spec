@@ -6,7 +6,7 @@
 %define keepstatic 1
 Name     : wxWidgets
 Version  : 3.2.2.1
-Release  : 29
+Release  : 30
 URL      : https://github.com/wxWidgets/wxWidgets/releases/download/v3.2.2.1/wxWidgets-3.2.2.1.tar.bz2
 Source0  : https://github.com/wxWidgets/wxWidgets/releases/download/v3.2.2.1/wxWidgets-3.2.2.1.tar.bz2
 Summary  : Posix compatible interface to libpcre2-8
@@ -126,7 +126,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1683315737
+export SOURCE_DATE_EPOCH=1687466747
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
 export FCFLAGS="$FFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
@@ -157,7 +157,7 @@ export LDFLAGS="$LDFLAGS -m64 -march=x86-64-v3 "
 make  %{?_smp_mflags}
 popd
 %install
-export SOURCE_DATE_EPOCH=1683315737
+export SOURCE_DATE_EPOCH=1687466747
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/wxWidgets
 cp %{_builddir}/wxWidgets-%{version}/3rdparty/catch/LICENSE.txt %{buildroot}/usr/share/package-licenses/wxWidgets/3cba29011be2b9d59f6204d6fa0a386b1b2dbd90 || :
@@ -187,7 +187,6 @@ popd
 
 %files bin
 %defattr(-,root,root,-)
-/V3/usr/bin/wxrc
 /V3/usr/bin/wxrc-3.2
 /usr/bin/wx-config
 /usr/bin/wxrc
@@ -203,21 +202,6 @@ popd
 
 %files dev
 %defattr(-,root,root,-)
-/V3/usr/lib64/libwx_baseu-3.2.so
-/V3/usr/lib64/libwx_baseu_net-3.2.so
-/V3/usr/lib64/libwx_baseu_xml-3.2.so
-/V3/usr/lib64/libwx_gtk3u_adv-3.2.so
-/V3/usr/lib64/libwx_gtk3u_aui-3.2.so
-/V3/usr/lib64/libwx_gtk3u_core-3.2.so
-/V3/usr/lib64/libwx_gtk3u_gl-3.2.so
-/V3/usr/lib64/libwx_gtk3u_html-3.2.so
-/V3/usr/lib64/libwx_gtk3u_media-3.2.so
-/V3/usr/lib64/libwx_gtk3u_propgrid-3.2.so
-/V3/usr/lib64/libwx_gtk3u_qa-3.2.so
-/V3/usr/lib64/libwx_gtk3u_ribbon-3.2.so
-/V3/usr/lib64/libwx_gtk3u_richtext-3.2.so
-/V3/usr/lib64/libwx_gtk3u_stc-3.2.so
-/V3/usr/lib64/libwx_gtk3u_xrc-3.2.so
 /usr/include/wx-3.2/wx/aboutdlg.h
 /usr/include/wx-3.2/wx/accel.h
 /usr/include/wx-3.2/wx/access.h
@@ -969,35 +953,20 @@ popd
 
 %files lib
 %defattr(-,root,root,-)
-/V3/usr/lib64/libwx_baseu-3.2.so.0
 /V3/usr/lib64/libwx_baseu-3.2.so.0.2.1
-/V3/usr/lib64/libwx_baseu_net-3.2.so.0
 /V3/usr/lib64/libwx_baseu_net-3.2.so.0.2.1
-/V3/usr/lib64/libwx_baseu_xml-3.2.so.0
 /V3/usr/lib64/libwx_baseu_xml-3.2.so.0.2.1
-/V3/usr/lib64/libwx_gtk3u_adv-3.2.so.0
 /V3/usr/lib64/libwx_gtk3u_adv-3.2.so.0.2.1
-/V3/usr/lib64/libwx_gtk3u_aui-3.2.so.0
 /V3/usr/lib64/libwx_gtk3u_aui-3.2.so.0.2.1
-/V3/usr/lib64/libwx_gtk3u_core-3.2.so.0
 /V3/usr/lib64/libwx_gtk3u_core-3.2.so.0.2.1
-/V3/usr/lib64/libwx_gtk3u_gl-3.2.so.0
 /V3/usr/lib64/libwx_gtk3u_gl-3.2.so.0.2.1
-/V3/usr/lib64/libwx_gtk3u_html-3.2.so.0
 /V3/usr/lib64/libwx_gtk3u_html-3.2.so.0.2.1
-/V3/usr/lib64/libwx_gtk3u_media-3.2.so.0
 /V3/usr/lib64/libwx_gtk3u_media-3.2.so.0.2.1
-/V3/usr/lib64/libwx_gtk3u_propgrid-3.2.so.0
 /V3/usr/lib64/libwx_gtk3u_propgrid-3.2.so.0.2.1
-/V3/usr/lib64/libwx_gtk3u_qa-3.2.so.0
 /V3/usr/lib64/libwx_gtk3u_qa-3.2.so.0.2.1
-/V3/usr/lib64/libwx_gtk3u_ribbon-3.2.so.0
 /V3/usr/lib64/libwx_gtk3u_ribbon-3.2.so.0.2.1
-/V3/usr/lib64/libwx_gtk3u_richtext-3.2.so.0
 /V3/usr/lib64/libwx_gtk3u_richtext-3.2.so.0.2.1
-/V3/usr/lib64/libwx_gtk3u_stc-3.2.so.0
 /V3/usr/lib64/libwx_gtk3u_stc-3.2.so.0.2.1
-/V3/usr/lib64/libwx_gtk3u_xrc-3.2.so.0
 /V3/usr/lib64/libwx_gtk3u_xrc-3.2.so.0.2.1
 /usr/lib64/libwx_baseu-3.2.so.0
 /usr/lib64/libwx_baseu-3.2.so.0.2.1
