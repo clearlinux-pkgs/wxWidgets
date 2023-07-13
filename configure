@@ -1,7 +1,6 @@
 --with-gtk=3
---without-libtiff
 --enable-cxx11
 --enable-debug_gdb
---enable-utf8
+--enable-intl
 --enable-notebook
 --enable-compat28

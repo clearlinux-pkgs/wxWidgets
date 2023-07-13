@@ -6,7 +6,7 @@
 %define keepstatic 1
 Name     : wxWidgets
 Version  : 3.2.2.1
-Release  : 30
+Release  : 31
 URL      : https://github.com/wxWidgets/wxWidgets/releases/download/v3.2.2.1/wxWidgets-3.2.2.1.tar.bz2
 Source0  : https://github.com/wxWidgets/wxWidgets/releases/download/v3.2.2.1/wxWidgets-3.2.2.1.tar.bz2
 Summary  : Posix compatible interface to libpcre2-8
@@ -126,17 +126,16 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1687466747
+export SOURCE_DATE_EPOCH=1689275824
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
 export FCFLAGS="$FFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
 export FFLAGS="$FFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
 export CXXFLAGS="$CXXFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
 %autogen  --with-gtk=3 \
---without-libtiff \
 --enable-cxx11 \
 --enable-debug_gdb \
---enable-utf8 \
+--enable-intl \
 --enable-notebook \
 --enable-compat28
 make  %{?_smp_mflags}
@@ -148,16 +147,15 @@ export FFLAGS="$FFLAGS -m64 -march=x86-64-v3 -Wl,-z,x86-64-v3 "
 export FCFLAGS="$FCFLAGS -m64 -march=x86-64-v3 "
 export LDFLAGS="$LDFLAGS -m64 -march=x86-64-v3 "
 %autogen  --with-gtk=3 \
---without-libtiff \
 --enable-cxx11 \
 --enable-debug_gdb \
---enable-utf8 \
+--enable-intl \
 --enable-notebook \
 --enable-compat28
 make  %{?_smp_mflags}
 popd
 %install
-export SOURCE_DATE_EPOCH=1687466747
+export SOURCE_DATE_EPOCH=1689275824
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/wxWidgets
 cp %{_builddir}/wxWidgets-%{version}/3rdparty/catch/LICENSE.txt %{buildroot}/usr/share/package-licenses/wxWidgets/3cba29011be2b9d59f6204d6fa0a386b1b2dbd90 || :
