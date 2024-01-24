@@ -3,4 +3,3 @@
 --enable-debug_gdb
 --enable-intl
 --enable-notebook
---enable-compat28
