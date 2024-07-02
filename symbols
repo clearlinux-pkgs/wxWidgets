@@ -733,6 +733,7 @@ libwx_baseu-3.2.so.0:_ZN13wxSecretStoreD2Ev
 libwx_baseu-3.2.so.0:_ZN13wxSecretValue10WipeStringER8wxString
 libwx_baseu-3.2.so.0:_ZN13wxSecretValue4WipeEmPv
 libwx_baseu-3.2.so.0:_ZN13wxSecretValue7NewImplEmPKv
+libwx_baseu-3.2.so.0:_ZN13wxSecretValue7NewImplEmPKvPKc
 libwx_baseu-3.2.so.0:_ZN13wxSecretValueC1ERKS_
 libwx_baseu-3.2.so.0:_ZN13wxSecretValueC2ERKS_
 libwx_baseu-3.2.so.0:_ZN13wxSecretValueD1Ev
@@ -4302,6 +4303,7 @@ libwx_gtk3u_core-3.2.so.0:_ZN11wxAnyButton8DoEnableEb
 libwx_gtk3u_core-3.2.so.0:_ZN11wxBrushList17FindOrCreateBrushERK8wxColour12wxBrushStyle
 libwx_gtk3u_core-3.2.so.0:_ZN11wxCaretBase12GetBlinkTimeEv
 libwx_gtk3u_core-3.2.so.0:_ZN11wxCaretBase12SetBlinkTimeEi
+libwx_gtk3u_core-3.2.so.0:_ZN11wxClipboard11DoGetTargetERK12wxDataFormat
 libwx_gtk3u_core-3.2.so.0:_ZN11wxClipboard11IsSupportedERK12wxDataFormat
 libwx_gtk3u_core-3.2.so.0:_ZN11wxClipboard12GTKClearDataENS_4KindE
 libwx_gtk3u_core-3.2.so.0:_ZN11wxClipboard13DoIsSupportedERK12wxDataFormat
@@ -10142,6 +10144,7 @@ libwx_gtk3u_core-3.2.so.0:_ZNK12wxColourData8ToStringEv
 libwx_gtk3u_core-3.2.so.0:_ZNK12wxComboPopup12GetComboCtrlEv
 libwx_gtk3u_core-3.2.so.0:_ZNK12wxDataFormat5GetIdEv
 libwx_gtk3u_core-3.2.so.0:_ZNK12wxDataFormat7GetTypeEv
+libwx_gtk3u_core-3.2.so.0:_ZNK12wxDataFormateqERKS_
 libwx_gtk3u_core-3.2.so.0:_ZNK12wxDataObject17IsSupportedFormatERK12wxDataFormatN16wxDataObjectBase9DirectionE
 libwx_gtk3u_core-3.2.so.0:_ZNK12wxDialogBase11GetModalityEv
 libwx_gtk3u_core-3.2.so.0:_ZNK12wxDialogBase13GetEventTableEv
@@ -16991,6 +16994,7 @@ libwx_gtk3u_webview-3.2.so.0:_ZN15wxWebViewWebKit23AddScriptMessageHandlerERK8wx
 libwx_gtk3u_webview-3.2.so.0:_ZN15wxWebViewWebKit23SetupWebExtensionServerEv
 libwx_gtk3u_webview-3.2.so.0:_ZN15wxWebViewWebKit25GetClassDefaultAttributesE15wxWindowVariant
 libwx_gtk3u_webview-3.2.so.0:_ZN15wxWebViewWebKit26RemoveScriptMessageHandlerERK8wxString
+libwx_gtk3u_webview-3.2.so.0:_ZN15wxWebViewWebKit27CreateHistoryItemFromWKItemEP26_WebKitBackForwardListItem
 libwx_gtk3u_webview-3.2.so.0:_ZN15wxWebViewWebKit3CutEv
 libwx_gtk3u_webview-3.2.so.0:_ZN15wxWebViewWebKit4CopyEv
 libwx_gtk3u_webview-3.2.so.0:_ZN15wxWebViewWebKit4FindERK8wxStringi

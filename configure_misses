@@ -13,7 +13,6 @@ Configure miss: floor
 Configure miss: g++ option to enable C++11 features
 Configure miss: g++ option to enable C++11 features
 Configure miss: g++ option to enable C++11 features
-Configure miss: gcc-14 option to enable C11 features
 Configure miss: if floating point functions link without -lm
 Configure miss: if floating point functions link without -lm
 Configure miss: if floating point functions link without -lm
@@ -23,6 +22,7 @@ Configure miss: if iconv needs const
 Configure miss: if size_t is unsigned int
 Configure miss: if size_t is unsigned int
 Configure miss: if size_t is unsigned int
+Configure miss: if snprintf supports positional arguments
 Configure miss: if vsnprintf declaration is broken
 Configure miss: if vsnprintf declaration is broken
 Configure miss: if vsnprintf declaration is broken
