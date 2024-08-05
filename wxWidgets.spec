@@ -8,7 +8,7 @@
 %define keepstatic 1
 Name     : wxWidgets
 Version  : 3.2.5
-Release  : 35
+Release  : 36
 URL      : https://github.com/wxWidgets/wxWidgets/releases/download/v3.2.5/wxWidgets-3.2.5.tar.bz2
 Source0  : https://github.com/wxWidgets/wxWidgets/releases/download/v3.2.5/wxWidgets-3.2.5.tar.bz2
 Summary  : PCRE2 - Perl compatible regular expressions C library (2nd API) with 32 bit character support
