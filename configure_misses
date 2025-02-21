@@ -22,6 +22,7 @@ Configure miss: if iconv needs const
 Configure miss: if size_t is unsigned int
 Configure miss: if size_t is unsigned int
 Configure miss: if size_t is unsigned int
+Configure miss: if snprintf supports positional arguments
 Configure miss: if vsnprintf declaration is broken
 Configure miss: if vsnprintf declaration is broken
 Configure miss: if vsnprintf declaration is broken
