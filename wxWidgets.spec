@@ -7,11 +7,11 @@
 #
 %define keepstatic 1
 Name     : wxWidgets
-Version  : 3.2.6
-Release  : 39
-URL      : https://github.com/wxWidgets/wxWidgets/releases/download/v3.2.6/wxWidgets-3.2.6.tar.bz2
-Source0  : https://github.com/wxWidgets/wxWidgets/releases/download/v3.2.6/wxWidgets-3.2.6.tar.bz2
-Summary  : Posix compatible interface to libpcre2-8
+Version  : 3.2.7
+Release  : 40
+URL      : https://github.com/wxWidgets/wxWidgets/releases/download/v3.2.7/wxWidgets-3.2.7.tar.bz2
+Source0  : https://github.com/wxWidgets/wxWidgets/releases/download/v3.2.7/wxWidgets-3.2.7.tar.bz2
+Summary  : PCRE2 - Perl compatible regular expressions C library (2nd API) with 16 bit character support
 Group    : Development/Tools
 License  : BSD-3-Clause BSL-1.0 GPL-2.0 HPND LGPL-2.0 Libpng MIT TCL Zlib libtiff
 Requires: wxWidgets-bin = %{version}-%{release}
@@ -53,13 +53,8 @@ BuildRequires : tiff-dev
 %define debug_package %{nil}
 
 %description
-------------------------------------------------------------------
-PCRE2 is a re-working of the original PCRE1 library to provide an entirely new
-API. Since its initial release in 2015, there has been further development of
-the code and it now differs from PCRE1 in more than just the API. There are new
-features, and the internals have been improved. The original PCRE1 library is
-now obsolete and should not be used in new projects. The latest release of
-PCRE2 is available in three alternative formats from:
+A simple autopackaged wxWidgets application
+==============================================================================
 
 %package bin
 Summary: bin components for the wxWidgets package.
@@ -119,13 +114,13 @@ locales components for the wxWidgets package.
 
 
 %prep
-%setup -q -n wxWidgets-3.2.6
-cd %{_builddir}/wxWidgets-3.2.6
+%setup -q -n wxWidgets-3.2.7
+cd %{_builddir}/wxWidgets-3.2.7
 pushd ..
-cp -a wxWidgets-3.2.6 buildavx2
+cp -a wxWidgets-3.2.7 buildavx2
 popd
 pushd ..
-cp -a wxWidgets-3.2.6 buildapx
+cp -a wxWidgets-3.2.7 buildapx
 popd
 
 %build
@@ -133,7 +128,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1740106634
+export SOURCE_DATE_EPOCH=1742483716
 export GCC_IGNORE_WERROR=1
 CLEAR_INTERMEDIATE_CFLAGS="$CLEAR_INTERMEDIATE_CFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
 CLEAR_INTERMEDIATE_FCFLAGS="$CLEAR_INTERMEDIATE_FFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
@@ -193,7 +188,7 @@ FFLAGS="$CLEAR_INTERMEDIATE_FFLAGS"
 FCFLAGS="$CLEAR_INTERMEDIATE_FCFLAGS"
 ASFLAGS="$CLEAR_INTERMEDIATE_ASFLAGS"
 LDFLAGS="$CLEAR_INTERMEDIATE_LDFLAGS"
-export SOURCE_DATE_EPOCH=1740106634
+export SOURCE_DATE_EPOCH=1742483716
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/wxWidgets
 cp %{_builddir}/wxWidgets-%{version}/3rdparty/catch/LICENSE.txt %{buildroot}/usr/share/package-licenses/wxWidgets/3cba29011be2b9d59f6204d6fa0a386b1b2dbd90 || :
@@ -1001,72 +996,72 @@ GOAMD64=v2
 
 %files lib
 %defattr(-,root,root,-)
-/V3/usr/lib64/libwx_baseu-3.2.so.0.3.0
-/V3/usr/lib64/libwx_baseu_net-3.2.so.0.3.0
-/V3/usr/lib64/libwx_baseu_xml-3.2.so.0.3.0
-/V3/usr/lib64/libwx_gtk3u_adv-3.2.so.0.3.0
-/V3/usr/lib64/libwx_gtk3u_aui-3.2.so.0.3.0
-/V3/usr/lib64/libwx_gtk3u_core-3.2.so.0.3.0
-/V3/usr/lib64/libwx_gtk3u_gl-3.2.so.0.3.0
-/V3/usr/lib64/libwx_gtk3u_html-3.2.so.0.3.0
-/V3/usr/lib64/libwx_gtk3u_media-3.2.so.0.3.0
-/V3/usr/lib64/libwx_gtk3u_propgrid-3.2.so.0.3.0
-/V3/usr/lib64/libwx_gtk3u_qa-3.2.so.0.3.0
-/V3/usr/lib64/libwx_gtk3u_ribbon-3.2.so.0.3.0
-/V3/usr/lib64/libwx_gtk3u_richtext-3.2.so.0.3.0
-/V3/usr/lib64/libwx_gtk3u_stc-3.2.so.0.3.0
-/V3/usr/lib64/libwx_gtk3u_webview-3.2.so.0.3.0
-/V3/usr/lib64/libwx_gtk3u_xrc-3.2.so.0.3.0
+/V3/usr/lib64/libwx_baseu-3.2.so.0.4.0
+/V3/usr/lib64/libwx_baseu_net-3.2.so.0.4.0
+/V3/usr/lib64/libwx_baseu_xml-3.2.so.0.4.0
+/V3/usr/lib64/libwx_gtk3u_adv-3.2.so.0.4.0
+/V3/usr/lib64/libwx_gtk3u_aui-3.2.so.0.4.0
+/V3/usr/lib64/libwx_gtk3u_core-3.2.so.0.4.0
+/V3/usr/lib64/libwx_gtk3u_gl-3.2.so.0.4.0
+/V3/usr/lib64/libwx_gtk3u_html-3.2.so.0.4.0
+/V3/usr/lib64/libwx_gtk3u_media-3.2.so.0.4.0
+/V3/usr/lib64/libwx_gtk3u_propgrid-3.2.so.0.4.0
+/V3/usr/lib64/libwx_gtk3u_qa-3.2.so.0.4.0
+/V3/usr/lib64/libwx_gtk3u_ribbon-3.2.so.0.4.0
+/V3/usr/lib64/libwx_gtk3u_richtext-3.2.so.0.4.0
+/V3/usr/lib64/libwx_gtk3u_stc-3.2.so.0.4.0
+/V3/usr/lib64/libwx_gtk3u_webview-3.2.so.0.4.0
+/V3/usr/lib64/libwx_gtk3u_xrc-3.2.so.0.4.0
 /V3/usr/lib64/wx/3.2/web-extensions/webkit2_extu-3.2.so
-/VA/usr/lib64/libwx_baseu-3.2.so.0.3.0
-/VA/usr/lib64/libwx_baseu_net-3.2.so.0.3.0
-/VA/usr/lib64/libwx_baseu_xml-3.2.so.0.3.0
-/VA/usr/lib64/libwx_gtk3u_adv-3.2.so.0.3.0
-/VA/usr/lib64/libwx_gtk3u_aui-3.2.so.0.3.0
-/VA/usr/lib64/libwx_gtk3u_core-3.2.so.0.3.0
-/VA/usr/lib64/libwx_gtk3u_gl-3.2.so.0.3.0
-/VA/usr/lib64/libwx_gtk3u_html-3.2.so.0.3.0
-/VA/usr/lib64/libwx_gtk3u_media-3.2.so.0.3.0
-/VA/usr/lib64/libwx_gtk3u_propgrid-3.2.so.0.3.0
-/VA/usr/lib64/libwx_gtk3u_qa-3.2.so.0.3.0
-/VA/usr/lib64/libwx_gtk3u_ribbon-3.2.so.0.3.0
-/VA/usr/lib64/libwx_gtk3u_richtext-3.2.so.0.3.0
-/VA/usr/lib64/libwx_gtk3u_stc-3.2.so.0.3.0
-/VA/usr/lib64/libwx_gtk3u_webview-3.2.so.0.3.0
-/VA/usr/lib64/libwx_gtk3u_xrc-3.2.so.0.3.0
+/VA/usr/lib64/libwx_baseu-3.2.so.0.4.0
+/VA/usr/lib64/libwx_baseu_net-3.2.so.0.4.0
+/VA/usr/lib64/libwx_baseu_xml-3.2.so.0.4.0
+/VA/usr/lib64/libwx_gtk3u_adv-3.2.so.0.4.0
+/VA/usr/lib64/libwx_gtk3u_aui-3.2.so.0.4.0
+/VA/usr/lib64/libwx_gtk3u_core-3.2.so.0.4.0
+/VA/usr/lib64/libwx_gtk3u_gl-3.2.so.0.4.0
+/VA/usr/lib64/libwx_gtk3u_html-3.2.so.0.4.0
+/VA/usr/lib64/libwx_gtk3u_media-3.2.so.0.4.0
+/VA/usr/lib64/libwx_gtk3u_propgrid-3.2.so.0.4.0
+/VA/usr/lib64/libwx_gtk3u_qa-3.2.so.0.4.0
+/VA/usr/lib64/libwx_gtk3u_ribbon-3.2.so.0.4.0
+/VA/usr/lib64/libwx_gtk3u_richtext-3.2.so.0.4.0
+/VA/usr/lib64/libwx_gtk3u_stc-3.2.so.0.4.0
+/VA/usr/lib64/libwx_gtk3u_webview-3.2.so.0.4.0
+/VA/usr/lib64/libwx_gtk3u_xrc-3.2.so.0.4.0
 /VA/usr/lib64/wx/3.2/web-extensions/webkit2_extu-3.2.so
 /usr/lib64/libwx_baseu-3.2.so.0
-/usr/lib64/libwx_baseu-3.2.so.0.3.0
+/usr/lib64/libwx_baseu-3.2.so.0.4.0
 /usr/lib64/libwx_baseu_net-3.2.so.0
-/usr/lib64/libwx_baseu_net-3.2.so.0.3.0
+/usr/lib64/libwx_baseu_net-3.2.so.0.4.0
 /usr/lib64/libwx_baseu_xml-3.2.so.0
-/usr/lib64/libwx_baseu_xml-3.2.so.0.3.0
+/usr/lib64/libwx_baseu_xml-3.2.so.0.4.0
 /usr/lib64/libwx_gtk3u_adv-3.2.so.0
-/usr/lib64/libwx_gtk3u_adv-3.2.so.0.3.0
+/usr/lib64/libwx_gtk3u_adv-3.2.so.0.4.0
 /usr/lib64/libwx_gtk3u_aui-3.2.so.0
-/usr/lib64/libwx_gtk3u_aui-3.2.so.0.3.0
+/usr/lib64/libwx_gtk3u_aui-3.2.so.0.4.0
 /usr/lib64/libwx_gtk3u_core-3.2.so.0
-/usr/lib64/libwx_gtk3u_core-3.2.so.0.3.0
+/usr/lib64/libwx_gtk3u_core-3.2.so.0.4.0
 /usr/lib64/libwx_gtk3u_gl-3.2.so.0
-/usr/lib64/libwx_gtk3u_gl-3.2.so.0.3.0
+/usr/lib64/libwx_gtk3u_gl-3.2.so.0.4.0
 /usr/lib64/libwx_gtk3u_html-3.2.so.0
-/usr/lib64/libwx_gtk3u_html-3.2.so.0.3.0
+/usr/lib64/libwx_gtk3u_html-3.2.so.0.4.0
 /usr/lib64/libwx_gtk3u_media-3.2.so.0
-/usr/lib64/libwx_gtk3u_media-3.2.so.0.3.0
+/usr/lib64/libwx_gtk3u_media-3.2.so.0.4.0
 /usr/lib64/libwx_gtk3u_propgrid-3.2.so.0
-/usr/lib64/libwx_gtk3u_propgrid-3.2.so.0.3.0
+/usr/lib64/libwx_gtk3u_propgrid-3.2.so.0.4.0
 /usr/lib64/libwx_gtk3u_qa-3.2.so.0
-/usr/lib64/libwx_gtk3u_qa-3.2.so.0.3.0
+/usr/lib64/libwx_gtk3u_qa-3.2.so.0.4.0
 /usr/lib64/libwx_gtk3u_ribbon-3.2.so.0
-/usr/lib64/libwx_gtk3u_ribbon-3.2.so.0.3.0
+/usr/lib64/libwx_gtk3u_ribbon-3.2.so.0.4.0
 /usr/lib64/libwx_gtk3u_richtext-3.2.so.0
-/usr/lib64/libwx_gtk3u_richtext-3.2.so.0.3.0
+/usr/lib64/libwx_gtk3u_richtext-3.2.so.0.4.0
 /usr/lib64/libwx_gtk3u_stc-3.2.so.0
-/usr/lib64/libwx_gtk3u_stc-3.2.so.0.3.0
+/usr/lib64/libwx_gtk3u_stc-3.2.so.0.4.0
 /usr/lib64/libwx_gtk3u_webview-3.2.so.0
-/usr/lib64/libwx_gtk3u_webview-3.2.so.0.3.0
+/usr/lib64/libwx_gtk3u_webview-3.2.so.0.4.0
 /usr/lib64/libwx_gtk3u_xrc-3.2.so.0
-/usr/lib64/libwx_gtk3u_xrc-3.2.so.0.3.0
+/usr/lib64/libwx_gtk3u_xrc-3.2.so.0.4.0
 /usr/lib64/wx/3.2/web-extensions/webkit2_extu-3.2.so
 
 %files license

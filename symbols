@@ -3,6 +3,7 @@ libwx_baseu-3.2.so.0:WXU_3.2.1
 libwx_baseu-3.2.so.0:WXU_3.2.2
 libwx_baseu-3.2.so.0:WXU_3.2.3
 libwx_baseu-3.2.so.0:WXU_3.2.6
+libwx_baseu-3.2.so.0:WXU_3.2.7
 libwx_baseu-3.2.so.0:_wxHashTableBase2::DummyProcessNode(_wxHashTable_NodeBase*)@@WXU_3.2
 libwx_baseu-3.2.so.0:endl(wxTextOutputStream&)@@WXU_3.2
 libwx_baseu-3.2.so.0:wxAbort()@@WXU_3.2
@@ -46,6 +47,7 @@ libwx_baseu-3.2.so.0:wxAppConsoleBase::ResumeProcessingOfPendingEvents()@@WXU_3.
 libwx_baseu-3.2.so.0:wxAppConsoleBase::RethrowStoredException()@@WXU_3.2
 libwx_baseu-3.2.so.0:wxAppConsoleBase::ScheduleForDestruction(wxObject*)@@WXU_3.2
 libwx_baseu-3.2.so.0:wxAppConsoleBase::SetCLocale()@@WXU_3.2
+libwx_baseu-3.2.so.0:wxAppConsoleBase::SetErrorExitCode(int)@@WXU_3.2.7
 libwx_baseu-3.2.so.0:wxAppConsoleBase::StoreCurrentException()@@WXU_3.2
 libwx_baseu-3.2.so.0:wxAppConsoleBase::SuspendProcessingOfPendingEvents()@@WXU_3.2
 libwx_baseu-3.2.so.0:wxAppConsoleBase::WXReservedApp1(void*)@@WXU_3.2
@@ -718,7 +720,7 @@ libwx_baseu-3.2.so.0:wxUILocale::GetLanguageName(int)@@WXU_3.2
 libwx_baseu-3.2.so.0:wxUILocale::GetPreferredUILanguages()@@WXU_3.2
 libwx_baseu-3.2.so.0:wxUILocale::GetSystemLanguage()@@WXU_3.2
 libwx_baseu-3.2.so.0:wxUILocale::GetSystemLocale()@@WXU_3.2
-libwx_baseu-3.2.so.0:wxUILocale::GetSystemLocaleId()@@WXU_3.2
+libwx_baseu-3.2.so.0:wxUILocale::GetSystemLocaleId()@@WXU_3.2.2
 libwx_baseu-3.2.so.0:wxUILocale::InitLanguagesDB()@@WXU_3.2
 libwx_baseu-3.2.so.0:wxUILocale::UseDefault()@@WXU_3.2
 libwx_baseu-3.2.so.0:wxUILocale::~wxUILocale()@@WXU_3.2
@@ -838,6 +840,7 @@ libwx_baseu_net-3.2.so.0:WXU_3.2.1
 libwx_baseu_net-3.2.so.0:WXU_3.2.2
 libwx_baseu_net-3.2.so.0:WXU_3.2.3
 libwx_baseu_net-3.2.so.0:WXU_3.2.6
+libwx_baseu_net-3.2.so.0:WXU_3.2.7
 libwx_baseu_net-3.2.so.0:wxFTP::Abort()@@WXU_3.2
 libwx_baseu_net-3.2.so.0:wxFTP::AcceptIfActive(wxSocketBase*)@@WXU_3.2
 libwx_baseu_net-3.2.so.0:wxFTP::Close()@@WXU_3.2
@@ -946,6 +949,7 @@ libwx_baseu_xml-3.2.so.0:WXU_3.2.1
 libwx_baseu_xml-3.2.so.0:WXU_3.2.2
 libwx_baseu_xml-3.2.so.0:WXU_3.2.3
 libwx_baseu_xml-3.2.so.0:WXU_3.2.6
+libwx_baseu_xml-3.2.so.0:WXU_3.2.7
 libwx_baseu_xml-3.2.so.0:wxXmlDoctype::Clear()@@WXU_3.2
 libwx_baseu_xml-3.2.so.0:wxXmlDocument::AppendToProlog(wxXmlNode*)@@WXU_3.2
 libwx_baseu_xml-3.2.so.0:wxXmlDocument::DetachRoot()@@WXU_3.2
@@ -964,12 +968,14 @@ libwx_gtk3u_adv-3.2.so.0:WXU_3.2.1
 libwx_gtk3u_adv-3.2.so.0:WXU_3.2.2
 libwx_gtk3u_adv-3.2.so.0:WXU_3.2.3
 libwx_gtk3u_adv-3.2.so.0:WXU_3.2.6
+libwx_gtk3u_adv-3.2.so.0:WXU_3.2.7
 libwx_gtk3u_adv-3.2.so.0:wxAdvLibraryIsObsoleteDontUse()@@WXU_3.2
 libwx_gtk3u_aui-3.2.so.0:WXU_3.2
 libwx_gtk3u_aui-3.2.so.0:WXU_3.2.1
 libwx_gtk3u_aui-3.2.so.0:WXU_3.2.2
 libwx_gtk3u_aui-3.2.so.0:WXU_3.2.3
 libwx_gtk3u_aui-3.2.so.0:WXU_3.2.6
+libwx_gtk3u_aui-3.2.so.0:WXU_3.2.7
 libwx_gtk3u_aui-3.2.so.0:wxAuiDefaultDockArt::Clone()@@WXU_3.2
 libwx_gtk3u_aui-3.2.so.0:wxAuiDefaultDockArt::GetColour(int)@@WXU_3.2
 libwx_gtk3u_aui-3.2.so.0:wxAuiDefaultDockArt::GetFont(int)@@WXU_3.2
@@ -1221,6 +1227,7 @@ libwx_gtk3u_core-3.2.so.0:WXU_3.2.1
 libwx_gtk3u_core-3.2.so.0:WXU_3.2.2
 libwx_gtk3u_core-3.2.so.0:WXU_3.2.3
 libwx_gtk3u_core-3.2.so.0:WXU_3.2.6
+libwx_gtk3u_core-3.2.so.0:WXU_3.2.7
 libwx_gtk3u_core-3.2.so.0:wxANIDecoder::Load(wxInputStream&)@@WXU_3.2
 libwx_gtk3u_core-3.2.so.0:wxANIDecoder::wxANIDecoder()@@WXU_3.2
 libwx_gtk3u_core-3.2.so.0:wxANIDecoder::~wxANIDecoder()@@WXU_3.2
@@ -4093,6 +4100,7 @@ libwx_gtk3u_gl-3.2.so.0:WXU_3.2.1
 libwx_gtk3u_gl-3.2.so.0:WXU_3.2.2
 libwx_gtk3u_gl-3.2.so.0:WXU_3.2.3
 libwx_gtk3u_gl-3.2.so.0:WXU_3.2.6
+libwx_gtk3u_gl-3.2.so.0:WXU_3.2.7
 libwx_gtk3u_gl-3.2.so.0:wxGLAPI::glEnd()@@WXU_3.2
 libwx_gtk3u_gl-3.2.so.0:wxGLAPI::wxGLAPI()@@WXU_3.2
 libwx_gtk3u_gl-3.2.so.0:wxGLAPI::~wxGLAPI()@@WXU_3.2
@@ -4116,8 +4124,8 @@ libwx_gtk3u_gl-3.2.so.0:wxGLCanvas::SetBackgroundStyle(wxBackgroundStyle)@@WXU_3
 libwx_gtk3u_gl-3.2.so.0:wxGLCanvasBase::wxGLCanvasBase()@@WXU_3.2
 libwx_gtk3u_gl-3.2.so.0:wxGLCanvasBase::~wxGLCanvasBase()@@WXU_3.2
 libwx_gtk3u_gl-3.2.so.0:wxGLCanvasEGL::CreateSurface()@@WXU_3.2
-libwx_gtk3u_gl-3.2.so.0:wxGLCanvasEGL::CreateWaylandSubsurface()@@WXU_3.2
-libwx_gtk3u_gl-3.2.so.0:wxGLCanvasEGL::DestroyWaylandSubsurface()@@WXU_3.2
+libwx_gtk3u_gl-3.2.so.0:wxGLCanvasEGL::CreateWaylandSubsurface()@@WXU_3.2.3
+libwx_gtk3u_gl-3.2.so.0:wxGLCanvasEGL::DestroyWaylandSubsurface()@@WXU_3.2.3
 libwx_gtk3u_gl-3.2.so.0:wxGLCanvasEGL::FreeDefaultConfig()@@WXU_3.2
 libwx_gtk3u_gl-3.2.so.0:wxGLCanvasEGL::GetDisplay()@@WXU_3.2
 libwx_gtk3u_gl-3.2.so.0:wxGLCanvasEGL::OnWLFrameCallback()@@WXU_3.2
@@ -4144,6 +4152,7 @@ libwx_gtk3u_html-3.2.so.0:WXU_3.2.1
 libwx_gtk3u_html-3.2.so.0:WXU_3.2.2
 libwx_gtk3u_html-3.2.so.0:WXU_3.2.3
 libwx_gtk3u_html-3.2.so.0:WXU_3.2.6
+libwx_gtk3u_html-3.2.so.0:WXU_3.2.7
 libwx_gtk3u_html-3.2.so.0:wxHtmlCell::Layout(int)@@WXU_3.2
 libwx_gtk3u_html-3.2.so.0:wxHtmlCell::wxHtmlCell()@@WXU_3.2
 libwx_gtk3u_html-3.2.so.0:wxHtmlCell::~wxHtmlCell()@@WXU_3.2
@@ -4324,6 +4333,7 @@ libwx_gtk3u_media-3.2.so.0:WXU_3.2.1
 libwx_gtk3u_media-3.2.so.0:WXU_3.2.2
 libwx_gtk3u_media-3.2.so.0:WXU_3.2.3
 libwx_gtk3u_media-3.2.so.0:WXU_3.2.6
+libwx_gtk3u_media-3.2.so.0:WXU_3.2.7
 libwx_gtk3u_media-3.2.so.0:wxGStreamerMediaBackend::EndOfStream()@@WXU_3.2
 libwx_gtk3u_media-3.2.so.0:wxGStreamerMediaBackend::GetDownloadProgress()@@WXU_3.2
 libwx_gtk3u_media-3.2.so.0:wxGStreamerMediaBackend::GetDownloadTotal()@@WXU_3.2
@@ -4371,6 +4381,7 @@ libwx_gtk3u_propgrid-3.2.so.0:WXU_3.2.1
 libwx_gtk3u_propgrid-3.2.so.0:WXU_3.2.2
 libwx_gtk3u_propgrid-3.2.so.0:WXU_3.2.3
 libwx_gtk3u_propgrid-3.2.so.0:WXU_3.2.6
+libwx_gtk3u_propgrid-3.2.so.0:WXU_3.2.7
 libwx_gtk3u_propgrid-3.2.so.0:wxArrayIntRefFromVariant(wxVariant&)@@WXU_3.2
 libwx_gtk3u_propgrid-3.2.so.0:wxArrayStringProperty::CreateEditorDialog()@@WXU_3.2
 libwx_gtk3u_propgrid-3.2.so.0:wxArrayStringProperty::GenerateValueAsString()@@WXU_3.2
@@ -4669,6 +4680,7 @@ libwx_gtk3u_qa-3.2.so.0:WXU_3.2.1
 libwx_gtk3u_qa-3.2.so.0:WXU_3.2.2
 libwx_gtk3u_qa-3.2.so.0:WXU_3.2.3
 libwx_gtk3u_qa-3.2.so.0:WXU_3.2.6
+libwx_gtk3u_qa-3.2.so.0:WXU_3.2.7
 libwx_gtk3u_qa-3.2.so.0:wxDebugReport::AddAll(wxDebugReport::Context)@@WXU_3.2
 libwx_gtk3u_qa-3.2.so.0:wxDebugReport::AddContext(wxDebugReport::Context)@@WXU_3.2
 libwx_gtk3u_qa-3.2.so.0:wxDebugReport::DoAddExceptionInfo(wxXmlNode*)@@WXU_3.2
@@ -4685,6 +4697,7 @@ libwx_gtk3u_ribbon-3.2.so.0:WXU_3.2.1
 libwx_gtk3u_ribbon-3.2.so.0:WXU_3.2.2
 libwx_gtk3u_ribbon-3.2.so.0:WXU_3.2.3
 libwx_gtk3u_ribbon-3.2.so.0:WXU_3.2.6
+libwx_gtk3u_ribbon-3.2.so.0:WXU_3.2.7
 libwx_gtk3u_ribbon-3.2.so.0:wxObjectArrayTraitsForwxRibbonPageTabInfoArray::Free(wxRibbonPageTabInfo*)@@WXU_3.2
 libwx_gtk3u_ribbon-3.2.so.0:wxRibbonAUIArtProvider::wxRibbonAUIArtProvider()@@WXU_3.2
 libwx_gtk3u_ribbon-3.2.so.0:wxRibbonAUIArtProvider::~wxRibbonAUIArtProvider()@@WXU_3.2
@@ -4854,6 +4867,7 @@ libwx_gtk3u_richtext-3.2.so.0:WXU_3.2.1
 libwx_gtk3u_richtext-3.2.so.0:WXU_3.2.2
 libwx_gtk3u_richtext-3.2.so.0:WXU_3.2.3
 libwx_gtk3u_richtext-3.2.so.0:WXU_3.2.6
+libwx_gtk3u_richtext-3.2.so.0:WXU_3.2.7
 libwx_gtk3u_richtext-3.2.so.0:wxObjectArrayTraitsForwxRichTextAttrArray::Free(wxRichTextAttr*)@@WXU_3.2
 libwx_gtk3u_richtext-3.2.so.0:wxObjectArrayTraitsForwxRichTextObjectPtrArrayArray::Free(wxRichTextObjectPtrArray*)@@WXU_3.2
 libwx_gtk3u_richtext-3.2.so.0:wxObjectArrayTraitsForwxRichTextRangeArray::Free(wxRichTextRange*)@@WXU_3.2
@@ -5473,6 +5487,7 @@ libwx_gtk3u_stc-3.2.so.0:WXU_3.2.1
 libwx_gtk3u_stc-3.2.so.0:WXU_3.2.2
 libwx_gtk3u_stc-3.2.so.0:WXU_3.2.3
 libwx_gtk3u_stc-3.2.so.0:WXU_3.2.6
+libwx_gtk3u_stc-3.2.so.0:WXU_3.2.7
 libwx_gtk3u_stc-3.2.so.0:wxStyledTextCtrl::AddRefDocument(void*)@@WXU_3.2
 libwx_gtk3u_stc-3.2.so.0:wxStyledTextCtrl::Allocate(int)@@WXU_3.2
 libwx_gtk3u_stc-3.2.so.0:wxStyledTextCtrl::AllocateExtendedStyles(int)@@WXU_3.2
@@ -5828,6 +5843,7 @@ libwx_gtk3u_webview-3.2.so.0:WXU_3.2.1
 libwx_gtk3u_webview-3.2.so.0:WXU_3.2.2
 libwx_gtk3u_webview-3.2.so.0:WXU_3.2.3
 libwx_gtk3u_webview-3.2.so.0:WXU_3.2.6
+libwx_gtk3u_webview-3.2.so.0:WXU_3.2.7
 libwx_gtk3u_webview-3.2.so.0:wxWebView::ClearSelection()@@WXU_3.2
 libwx_gtk3u_webview-3.2.so.0:wxWebView::Copy()@@WXU_3.2
 libwx_gtk3u_webview-3.2.so.0:wxWebView::Cut()@@WXU_3.2
@@ -5881,6 +5897,7 @@ libwx_gtk3u_xrc-3.2.so.0:WXU_3.2.1
 libwx_gtk3u_xrc-3.2.so.0:WXU_3.2.2
 libwx_gtk3u_xrc-3.2.so.0:WXU_3.2.3
 libwx_gtk3u_xrc-3.2.so.0:WXU_3.2.6
+libwx_gtk3u_xrc-3.2.so.0:WXU_3.2.7
 libwx_gtk3u_xrc-3.2.so.0:wxActivityIndicatorXmlHandler::CanHandle(wxXmlNode*)@@WXU_3.2
 libwx_gtk3u_xrc-3.2.so.0:wxActivityIndicatorXmlHandler::DoCreateResource()@@WXU_3.2
 libwx_gtk3u_xrc-3.2.so.0:wxActivityIndicatorXmlHandler::wxActivityIndicatorXmlHandler()@@WXU_3.2
