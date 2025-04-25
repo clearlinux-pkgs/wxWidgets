@@ -721,6 +721,7 @@ libwx_baseu-3.2.so.0:wxUILocale::GetPreferredUILanguages()@@WXU_3.2
 libwx_baseu-3.2.so.0:wxUILocale::GetSystemLanguage()@@WXU_3.2
 libwx_baseu-3.2.so.0:wxUILocale::GetSystemLocale()@@WXU_3.2
 libwx_baseu-3.2.so.0:wxUILocale::GetSystemLocaleId()@@WXU_3.2.2
+libwx_baseu-3.2.so.0:wxUILocale::GetSystemLocaleId()@WXU_3.2
 libwx_baseu-3.2.so.0:wxUILocale::InitLanguagesDB()@@WXU_3.2
 libwx_baseu-3.2.so.0:wxUILocale::UseDefault()@@WXU_3.2
 libwx_baseu-3.2.so.0:wxUILocale::~wxUILocale()@@WXU_3.2
@@ -3528,6 +3529,7 @@ libwx_gtk3u_core-3.2.so.0:wxStaticText::GTKWidgetDoSetMnemonic(_GtkWidget*)@@WXU
 libwx_gtk3u_core-3.2.so.0:wxStaticText::GetClassDefaultAttributes(wxWindowVariant)@@WXU_3.2
 libwx_gtk3u_core-3.2.so.0:wxStaticText::wxCreateObject()@@WXU_3.2
 libwx_gtk3u_core-3.2.so.0:wxStaticText::wxStaticText()@@WXU_3.2
+libwx_gtk3u_core-3.2.so.0:wxStaticText::~wxStaticText()@@WXU_3.2
 libwx_gtk3u_core-3.2.so.0:wxStaticTextBase::AutoResizeIfNecessary()@@WXU_3.2
 libwx_gtk3u_core-3.2.so.0:wxStaticTextBase::UpdateLabel()@@WXU_3.2
 libwx_gtk3u_core-3.2.so.0:wxStaticTextBase::Wrap(int)@@WXU_3.2
@@ -4125,7 +4127,9 @@ libwx_gtk3u_gl-3.2.so.0:wxGLCanvasBase::wxGLCanvasBase()@@WXU_3.2
 libwx_gtk3u_gl-3.2.so.0:wxGLCanvasBase::~wxGLCanvasBase()@@WXU_3.2
 libwx_gtk3u_gl-3.2.so.0:wxGLCanvasEGL::CreateSurface()@@WXU_3.2
 libwx_gtk3u_gl-3.2.so.0:wxGLCanvasEGL::CreateWaylandSubsurface()@@WXU_3.2.3
+libwx_gtk3u_gl-3.2.so.0:wxGLCanvasEGL::CreateWaylandSubsurface()@WXU_3.2
 libwx_gtk3u_gl-3.2.so.0:wxGLCanvasEGL::DestroyWaylandSubsurface()@@WXU_3.2.3
+libwx_gtk3u_gl-3.2.so.0:wxGLCanvasEGL::DestroyWaylandSubsurface()@WXU_3.2
 libwx_gtk3u_gl-3.2.so.0:wxGLCanvasEGL::FreeDefaultConfig()@@WXU_3.2
 libwx_gtk3u_gl-3.2.so.0:wxGLCanvasEGL::GetDisplay()@@WXU_3.2
 libwx_gtk3u_gl-3.2.so.0:wxGLCanvasEGL::OnWLFrameCallback()@@WXU_3.2
